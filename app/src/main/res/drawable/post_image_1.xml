@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="140dp"
+    android:viewportWidth="140"
+    android:viewportHeight="140">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,0h140v140h-140z"/>
+    
+    <!-- Road -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M0,80h140v20h-140z"/>
+    
+    <!-- Road lines -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M0,90h140v2h-140z"/>
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M0,88h140v2h-140z"/>
+    
+    <!-- Cars -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M20,70h20v10h-20z"/>
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M60,70h20v10h-20z"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M100,70h20v10h-20z"/>
+    
+    <!-- Traffic light -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M120,40h8v20h-8z"/>
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M121,42h6v6h-6z"/>
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M121,50h6v6h-6z"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M121,58h6v6h-6z"/>
+    
+    <!-- Buildings -->
+    <path
+        android:fillColor="#607D8B"
+        android:pathData="M10,30h15v50h-15z"/>
+    <path
+        android:fillColor="#795548"
+        android:pathData="M35,40h15v40h-15z"/>
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M60,35h15v45h-15z"/>
+    <path
+        android:fillColor="#607D8B"
+        android:pathData="M85,25h15v55h-15z"/>
+    
+</vector> 

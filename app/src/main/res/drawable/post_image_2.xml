@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="140dp"
+    android:viewportWidth="140"
+    android:viewportHeight="140">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M0,0h140v140h-140z"/>
+    
+    <!-- Car body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,60h80v30h-80z"/>
+    
+    <!-- Car roof -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,40h60v20h-60z"/>
+    
+    <!-- Car windows -->
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M45,45h15v10h-15z"/>
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M80,45h15v10h-15z"/>
+    
+    <!-- Car wheels -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M35,85h10v10h-10z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M95,85h10v10h-10z"/>
+    
+    <!-- Car lights -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M30,65h5v5h-5z"/>
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M105,65h5v5h-5z"/>
+    
+    <!-- Flower garlands -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M25,55h90v5h-90z"/>
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M30,55h5v5h-5z"/>
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M50,55h5v5h-5z"/>
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M70,55h5v5h-5z"/>
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M90,55h5v5h-5z"/>
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M110,55h5v5h-5z"/>
+    
+    <!-- Ground -->
+    <path
+        android:fillColor="#8BC34A"
+        android:pathData="M0,95h140v45h-140z"/>
+    
+    <!-- Sun -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M110,20h15v15h-15z"/>
+    
+</vector> 

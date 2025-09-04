@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Rapido section (60%) - #FECA1F -->
+    <item android:gravity="center">
+        <rotate android:fromDegrees="-90">
+            <shape android:shape="ring" android:innerRadius="35dp" android:thickness="15dp">
+                <solid android:color="#FECA1F" />
+                <size android:width="100dp" android:height="100dp" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list> 

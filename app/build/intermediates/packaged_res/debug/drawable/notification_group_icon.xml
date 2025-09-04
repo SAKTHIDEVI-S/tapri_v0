@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Light blue circle background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E3F2FD" />
+            <size android:width="40dp" android:height="40dp" />
+        </shape>
+    </item>
+    
+    <!-- Dark blue people icon -->
+    <item android:gravity="center">
+        <vector
+            android:width="20dp"
+            android:height="20dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            
+            <path
+                android:fillColor="#1976D2"
+                android:pathData="M16,4C16,2.89 15.11,2 14,2C12.89,2 12,2.89 12,4C12,5.11 12.89,6 14,6C15.11,6 16,5.11 16,4ZM20,22V16C20,14.9 19.1,14 18,14C17.39,14 16.82,14.21 16.36,14.56C17.33,15.13 18,16.08 18,17.22V22H20ZM12.5,11.5C14.33,11.5 16,10.83 16,10C16,9.17 14.33,8.5 12.5,8.5C10.67,8.5 9,9.17 9,10C9,10.83 10.67,11.5 12.5,11.5ZM5,6C6.11,6 7,5.11 7,4C7,2.89 6.11,2 5,2C3.89,2 3,2.89 3,4C3,5.11 3.89,6 5,6ZM7,22V17.22C7,16.08 7.67,15.13 8.64,14.56C8.18,14.21 7.61,14 7,14C5.9,14 5,14.9 5,16V22H7ZM12.5,13C10.57,13 7,13.92 7,15.75V22H18V15.75C18,13.92 14.43,13 12.5,13Z"/>
+                
+        </vector>
+    </item>
+    
+</layer-list> 

@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_onboarding_join.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\onboarding_join.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_tapri_logo.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\tapri_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "com.tapri.app-merged_res-48:/layout_activity_signup.xml.flat",
+        "source": "com.tapri.app-main-50:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\layout_activity_otp.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_edittext_bg.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\edittext_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_onboarding_earn.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\onboarding_earn.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_login_bg.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\login_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_signup_bg.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\signup_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_onboarding_compare.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\onboarding_compare.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_tapri_logo_small.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\tapri_logo_small.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\layout_item_onboarding.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\item_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_rounded_red_button.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\rounded_red_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-merged_res-48:\\drawable_onboarding_wave.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\drawable\\onboarding_wave.png"
+    }
+]

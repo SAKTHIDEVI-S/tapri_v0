@@ -1,0 +1,3 @@
+com.tapri.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

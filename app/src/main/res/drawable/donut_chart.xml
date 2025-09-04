@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#F5F5F5" />
+            <size android:width="100dp" android:height="100dp" />
+        </shape>
+    </item>
+    
+    <!-- Rapido section (60%) - Yellow ring -->
+    <item android:gravity="center">
+        <shape android:shape="ring" android:innerRadius="30dp" android:thickness="20dp">
+            <solid android:color="#FECA1F" />
+            <size android:width="100dp" android:height="100dp" />
+        </shape>
+    </item>
+    
+    <!-- OLA section (25%) - Green ring -->
+    <item android:gravity="center">
+        <shape android:shape="ring" android:innerRadius="30dp" android:thickness="15dp">
+            <solid android:color="#D2DA2C" />
+            <size android:width="100dp" android:height="100dp" />
+        </shape>
+    </item>
+    
+    <!-- Uber section (15%) - Black ring -->
+    <item android:gravity="center">
+        <shape android:shape="ring" android:innerRadius="30dp" android:thickness="10dp">
+            <solid android:color="#000000" />
+            <size android:width="100dp" android:height="100dp" />
+        </shape>
+    </item>
+    
+    <!-- Center white circle for steering wheel -->
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+            <size android:width="40dp" android:height="40dp" />
+        </shape>
+    </item>
+</layer-list> 

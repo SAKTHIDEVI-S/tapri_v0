@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="65dp"
+    android:height="65dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16"
+    android:tint="#FFFFFF">
+
+    <!-- Dollar symbol inside a circle -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M8,2A6,6 0 1,0 14,8A6,6 0 0,0 8,2ZM8,4V12M10,6H6C5.4477,6 5,6.4477 5,7C5,7.5523 5.4477,8 6,8H10C10.5523,8 11,8.4477 11,9C11,9.5523 10.5523,10 10,10H5"/>
+</vector>

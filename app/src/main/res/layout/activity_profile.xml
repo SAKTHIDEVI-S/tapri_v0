@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <!-- Background with scattered vehicle icons -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.15">
+
+                 <!-- Car icon top-left -->
+         <ImageView
+             android:layout_width="48dp"
+             android:layout_height="48dp"
+             android:src="@drawable/ic_car"
+             android:layout_gravity="top|start"
+             android:layout_marginTop="100dp"
+             android:layout_marginStart="40dp"
+             android:tint="#D50000"
+             android:rotation="15"/>
+
+         <!-- Bicycle icon mid-left -->
+         <ImageView
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:src="@drawable/ic_bicycle"
+             android:layout_gravity="center_vertical|start"
+             android:layout_marginStart="60dp"
+             android:tint="#D50000"
+             android:rotation="-25"/>
+
+         <!-- Bus icon top-right -->
+         <ImageView
+             android:layout_width="56dp"
+             android:layout_height="56dp"
+             android:src="@drawable/ic_bus"
+             android:layout_gravity="top|end"
+             android:layout_marginTop="120dp"
+             android:layout_marginEnd="50dp"
+             android:tint="#D50000"
+             android:rotation="-10"/>
+
+                  <!-- Bicycle icon bottom-right -->
+         <ImageView
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:src="@drawable/ic_bicycle"
+             android:layout_gravity="bottom|end"
+             android:layout_marginBottom="200dp"
+             android:layout_marginEnd="80dp"
+             android:tint="#D50000"
+             android:rotation="30"/>
+
+         <!-- Additional car icon bottom-left -->
+         <ImageView
+             android:layout_width="44dp"
+             android:layout_height="44dp"
+             android:src="@drawable/ic_car"
+             android:layout_gravity="bottom|start"
+             android:layout_marginBottom="150dp"
+             android:layout_marginStart="50dp"
+             android:tint="#D50000"
+             android:rotation="-20"/>
+
+                   <!-- Additional bus icon mid-right -->
+          <ImageView
+              android:layout_width="52dp"
+              android:layout_height="52dp"
+              android:src="@drawable/ic_bus"
+              android:layout_gravity="center_vertical|end"
+              android:layout_marginEnd="70dp"
+              android:tint="#D50000"
+              android:rotation="5"/>
+
+          <!-- Additional car icon top-center -->
+          <ImageView
+              android:layout_width="46dp"
+              android:layout_height="46dp"
+              android:src="@drawable/ic_car"
+              android:layout_gravity="top|center"
+              android:layout_marginTop="80dp"
+              android:tint="#D50000"
+              android:rotation="-35"/>
+
+          <!-- Additional bicycle icon center -->
+          <ImageView
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:src="@drawable/ic_bicycle"
+              android:layout_gravity="center"
+              android:layout_marginTop="100dp"
+              android:tint="#D50000"
+              android:rotation="45"/>
+
+          <!-- Additional bus icon bottom-center -->
+          <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_bus"
+              android:layout_gravity="bottom|center"
+              android:layout_marginBottom="120dp"
+              android:tint="#D50000"
+              android:rotation="-15"/>
+
+      </FrameLayout>
+
+    <!-- Top Bar - Fixed positioning -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; Back"
+            android:textSize="16sp"
+            android:textColor="#E53935"
+            android:textStyle="bold"
+            android:background="@drawable/common_back_button"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Profile Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:gravity="center"/>
+
+        <!-- Spacer to balance the back button -->
+        <View
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+    </LinearLayout>
+
+    <!-- ScrollView for content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Profile Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <!-- Profile picture with beautiful glow -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Beautiful glow background -->
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/profile_glow_background"
+                        android:layout_gravity="center"/>
+
+                    <!-- Profile picture -->
+                    <ImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/profile"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Profile Picture - Tap to change"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sak"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Rating in single line -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rating "
+                        android:textSize="16sp"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:id="@+id/userRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Today's Earnings Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_stroke_background"
+                android:padding="24dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Earnings"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/todayEarnings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Highest ₹2,500"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Milestone Bar -->
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:progress="60"
+                    android:progressDrawable="@drawable/milestone_bar"
+                    android:indeterminate="false"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="480 above city average - nice work!"
+                    android:textSize="16sp"
+                    android:textColor="#4CAF50"/>
+            </LinearLayout>
+
+            <!-- Active Platforms Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_stroke_background"
+                android:padding="24dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active Platforms"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Uber Logo -->
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/uber"
+                        android:scaleType="fitCenter"
+                        android:layout_marginEnd="24dp"/>
+
+                    <!-- Rapido Logo -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/rapido"
+                        android:scaleType="fitCenter"
+                        android:layout_marginEnd="24dp"/>
+
+                    <!-- Ola Driver Logo -->
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ola_driver"
+                        android:scaleType="fitCenter"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- My Posts Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_stroke_background"
+                android:padding="24dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Posts"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View all"
+                        android:textSize="16sp"
+                        android:textColor="#E53935"/>
+                </LinearLayout>
+
+                <!-- Horizontal post images layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- First post image -->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/post1"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rounded_corner_background"
+                        android:contentDescription="Post image 1"/>
+
+                    <!-- Second post image -->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/post2"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/rounded_corner_background"
+                        android:contentDescription="Post image 2"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Achievements Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_stroke_background"
+                android:padding="24dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Achievements"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View all"
+                        android:textSize="16sp"
+                        android:textColor="#E53935"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_trophy"
+                            android:layout_marginEnd="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Top rated driver"
+                            android:textSize="16sp"
+                            android:textColor="#1A1A1A"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_check"
+                            android:layout_marginEnd="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On-time Pro"
+                            android:textSize="16sp"
+                            android:textColor="#1A1A1A"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_clipboard"
+                            android:layout_marginEnd="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 tasks in a week"
+                            android:textSize="16sp"
+                            android:textColor="#1A1A1A"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/taskHistoryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/profile_button_background"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Task History"
+                        android:textSize="16sp"
+                        android:textColor="#1A1A1A"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_back"
+                        android:rotation="180"
+                        android:tint="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/savedPostsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/profile_button_background"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Saved Posts"
+                        android:textSize="16sp"
+                        android:textColor="#1A1A1A"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_back"
+                        android:rotation="180"
+                        android:tint="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/profile_button_background"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Settings"
+                        android:textSize="16sp"
+                        android:textColor="#1A1A1A"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_back"
+                        android:rotation="180"
+                        android:tint="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/logoutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/profile_button_background"
+                    android:paddingHorizontal="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Logout"
+                        android:textSize="16sp"
+                        android:textColor="#E53935"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

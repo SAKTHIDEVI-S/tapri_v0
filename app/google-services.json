@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "922111666659",
+    "project_id": "tapri-9e996",
+    "storage_bucket": "tapri-9e996.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922111666659:android:fec37ffca6a7017f0698d6",
+        "android_client_info": {
+          "package_name": "com.tapri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtARril1FlzhvXqhbNTRZ8j82CGPwsMcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

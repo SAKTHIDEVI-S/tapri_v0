@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_job_details.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_job_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_notifications.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_comment.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_tip_details.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_tip_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_info.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_info.xml"
+    },
+    {
+        "merged": "com.tapri.app-mergeDebugResources-55:/layout/item_onboarding.xml",
+        "source": "com.tapri.app-main-58:/layout/item_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_create_post.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_create_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_groups.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_onboarding.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_signup.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_earn.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_earn.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_tip.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_tip.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_earn.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_earn.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_claim.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_claim.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_claimed_job.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_claimed_job.xml"
+    },
+    {
+        "merged": "com.tapri.app-mergeDebugResources-55:/layout/activity_onboarding.xml",
+        "source": "com.tapri.app-main-58:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_group_chat.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_group_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_otp.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_group.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_unclaimed_job_details.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_unclaimed_job_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_info.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\bottom_sheet_comments.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\bottom_sheet_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_post.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_post_job.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_post_job.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\item_onboarding.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\popup_post_options.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\popup_post_options.xml"
+    },
+    {
+        "merged": "com.tapri.app-mergeDebugResources-55:/layout/activity_login.xml",
+        "source": "com.tapri.app-main-58:/layout/activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-mergeDebugResources-55:\\layout\\activity_tips.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_tips.xml"
+    }
+]

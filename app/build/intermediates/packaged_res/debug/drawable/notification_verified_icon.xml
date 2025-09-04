@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Light yellow circle background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFF9C4" />
+            <size android:width="40dp" android:height="40dp" />
+        </shape>
+    </item>
+    
+    <!-- Black checkmark -->
+    <item android:gravity="center">
+        <vector
+            android:width="20dp"
+            android:height="20dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            
+            <path
+                android:fillColor="#000000"
+                android:pathData="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/>
+                
+        </vector>
+    </item>
+    
+</layer-list> 

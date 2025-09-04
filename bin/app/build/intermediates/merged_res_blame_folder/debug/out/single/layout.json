@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-mergeDebugResources-47:\\layout\\activity_otp.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-mergeDebugResources-47:\\layout\\activity_signup.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-mergeDebugResources-47:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-mergeDebugResources-47:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-mergeDebugResources-47:\\layout\\activity_onboarding.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-mergeDebugResources-47:\\layout\\item_onboarding.xml",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.4\\com.tapri.app-main-50:\\layout\\item_onboarding.xml"
+    },
+    {
+        "merged": "com.tapri.app-mergeDebugResources-47:/layout/activity_signup.xml",
+        "source": "com.tapri.app-main-50:/layout/activity_signup.xml"
+    }
+]

@@ -1,0 +1,866 @@
+[
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_profile_picture_border.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\profile_picture_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_mic.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_mic.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_tip.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_tip.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_bus.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_bus.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_arrow_up.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_arrow_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post1.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post1.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_onboarding_earn.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\onboarding_earn.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_notification_group_icon.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\notification_group_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_platform_icon_background_ola.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\platform_icon_background_ola.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_profile_glow_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\profile_glow_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_group_chat.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_group_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\circle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_earn_circle_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\earn_circle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_message_bubble_other.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\message_bubble_other.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_missed_opportunities_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\missed_opportunities_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_gift.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\gift.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ola_home.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ola_home.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_simple_three_color_chart.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\simple_three_color_chart.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_onboarding_compare.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\onboarding_compare.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_info.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_secondary_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\secondary_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_trend_indicator_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\trend_indicator_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post2.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post2.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tapri_black.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tapri_black.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_earn_large.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_earn_large.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_grocery.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\grocery.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hashtag_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hashtag_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_traffic_alert.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\traffic_alert.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_dot_inactive.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\dot_inactive.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_info.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_profile_on_home.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\profile_on_home.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tapri_logo.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tapri_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_help.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_help.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_rounded_red_button.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\rounded_red_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\color_bottom_nav_icon_color.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\color\\bottom_nav_icon_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ola_driver.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ola_driver.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_edittext_bg.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\edittext_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_map.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\map.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_earnings_card_gradient.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\earnings_card_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_more_vert.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_more_vert.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_sample_traffic.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\sample_traffic.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_rupee.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_rupee.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_message_bubble_own.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\message_bubble_own.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_save.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_onboarding_join.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\onboarding_join.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_profile.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\profile.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_notification_card_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\notification_card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_proper_pie_chart.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\proper_pie_chart.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_rapido_home.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\rapido_home.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_real_pie_chart.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\real_pie_chart.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_platform_icon_background_rapido.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\platform_icon_background_rapido.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post_type_card_selected_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post_type_card_selected_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ask_help.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ask_help.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_segmented_control_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\segmented_control_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tips_black.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tips_black.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_onboarding_wave.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\onboarding_wave.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_trophy.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_trophy.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_comment.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hashtag_bg.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hashtag_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_primary_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\primary_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post_type_card_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post_type_card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hotspot_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hotspot_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_create_post.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_create_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_bicycle.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_bicycle.xml"
+    },
+    {
+        "merged": "com.tapri.app-merged_res-56:/xml_network_security_config.xml.flat",
+        "source": "com.tapri.app-main-58:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_trending_up.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_trending_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_tips.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_tips.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_car.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_car.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_notification_bonus_icon.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\notification_bonus_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_modern_pie_chart_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\modern_pie_chart_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_dropdown_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\dropdown_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_claim_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\claim_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_notification_verified_icon.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\notification_verified_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_bottom_sheet_comments.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\bottom_sheet_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_profile_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\profile_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_fuel.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\fuel.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_poll.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_poll.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_uber_segment.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\uber_segment.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_traffic_light.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_traffic_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hp5.jpg.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hp5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_rounded_corner_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\rounded_corner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_rapido_color_indicator.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\rapido_color_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_voice_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\voice_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_circular_progress_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\circular_progress_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_refer.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\refer.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_segmented_unselected_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\segmented_unselected_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_donut_chart.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\donut_chart.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_fab_shadow.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\fab_shadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post3.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post3.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_location.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_claim.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_claim.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_fire.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\fire.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_check.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_arrow_left.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_arrow_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_uber_home.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\uber_home.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_home_red.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\home_red.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_common_back_button.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\common_back_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_grab_now_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\grab_now_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_card_stroke_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\card_stroke_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tips_red.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tips_red.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tyre.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tyre.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tapri_red.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tapri_red.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_rapido.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\rapido.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_milestone_bar.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\milestone_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_login_bg.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\login_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_share.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hp3.jpg.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hp3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\color_earn_icon_color.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\color\\earn_icon_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_notification_rain_icon.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\notification_rain_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_share_tip.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\share_tip.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_chart_bar_gray.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\chart_bar_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_notifications.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tab_selected_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tab_selected_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_claimed_job.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_claimed_job.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_thunder.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\thunder.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_plus.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_otp.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_like_filled.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_like_filled.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_groups.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_semi_rectangle_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\semi_rectangle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_tapri_plus.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_tapri_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_earn.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_earn.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_tips.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_tips.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post_image_1.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post_image_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_map_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\map_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_post.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_video.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_video.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_rapido_segment.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\rapido_segment.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_fuel_pump.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_fuel_pump.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hp1.jpg.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hp1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_refer_earn_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\refer_earn_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_profile_avatar.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\profile_avatar.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_tip_details.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_tip_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_home_black.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\home_black.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_pie_chart_container_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\pie_chart_container_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_job_card_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\job_card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post_job_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post_job_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_clipboard.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_clipboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_popup_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\popup_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_copy.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_copy.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_otp_field_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\otp_field_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_like.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_like.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_bottom_sheet_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\bottom_sheet_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_message_input_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\message_input_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_report.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_arrow_down.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_arrow_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_group.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_more.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_job_details.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_job_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_item_onboarding.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\item_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_trending.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_trending.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_phone.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_phone.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hp4.jpg.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hp4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_empty_area_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\empty_area_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tapri_white.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tapri_white.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_hp2.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\hp2.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_flame.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_flame.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ola_segment.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ola_segment.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_simple_pie_chart.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\simple_pie_chart.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_distance.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_distance.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_send.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_group_plus.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_group_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_earn.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_earn.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_earnings.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_earnings.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_earn.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\earn.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_posthome1.jpg.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\posthome1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_post_image_2.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\post_image_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_send_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\send_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_uber.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\uber.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_lightning.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_lightning.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_refer_now_button_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\refer_now_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_pie_chart_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\pie_chart_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_signup_bg.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\signup_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_chart_bar_red.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\chart_bar_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_tyre.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_tyre.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_segmented_selected_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\segmented_selected_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_safety.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_safety.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_status_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\status_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_comment.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_popup_post_options.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\popup_post_options.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_uber_color_indicator.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\uber_color_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_groups.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_text_input_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\text_input_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ic_save_filled.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ic_save_filled.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_steering_icon_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\steering_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_platform_icon_background_uber.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\platform_icon_background_uber.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tapri_logo_small.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tapri_logo_small.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_steering.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\steering.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_live_tag_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\live_tag_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ola_color_indicator.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ola_color_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_info_black.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\info_black.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_earn.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_earn.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_info_red.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\info_red.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_unclaimed_job_details.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_unclaimed_job_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_post_job.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_post_job.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_dot_active.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\dot_active.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_ongoing.png.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\ongoing.png"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\drawable_tab_unselected_background.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\drawable\\tab_unselected_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-merged_res-56:\\layout_activity_info.xml.flat",
+        "source": "C:\\Users\\EB197TS\\.gradle\\daemon\\8.5\\com.tapri.app-main-58:\\layout\\activity_info.xml"
+    }
+]

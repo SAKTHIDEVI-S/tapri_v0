@@ -1,0 +1,6 @@
+com.tapri.test.app-jetified-annotation-experimental-1.3.0-0 C:\Users\EB197TS\.gradle\caches\transforms-3\94fdbe36bc836f64d3cfc39462710e1f\transformed\jetified-annotation-experimental-1.3.0\res
+com.tapri.test.app-jetified-core-1.5.0-1 C:\Users\EB197TS\.gradle\caches\transforms-3\d242910611cd166f99398c0ea9d47a22\transformed\jetified-core-1.5.0\res
+com.tapri.test.app-androidTest-2 D:\Tapri\app\build\generated\res\resValues\androidTest\debug
+com.tapri.test.app-mergeDebugAndroidTestResources-3 D:\Tapri\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.tapri.test.app-mergeDebugAndroidTestResources-4 D:\Tapri\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.tapri.test.app-merged_res-5 D:\Tapri\app\build\intermediates\merged_res\debugAndroidTest

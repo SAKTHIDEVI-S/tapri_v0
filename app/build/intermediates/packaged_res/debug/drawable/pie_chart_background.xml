@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#F5F5F5" />
+            <size android:width="90dp" android:height="90dp" />
+        </shape>
+    </item>
+    
+    <!-- Rapido section (60% - 216 degrees) - #FECA1F -->
+    <item android:gravity="center">
+        <rotate android:fromDegrees="0">
+            <shape android:shape="ring" android:innerRadius="32dp" android:thickness="8dp">
+                <solid android:color="#FECA1F" />
+                <size android:width="90dp" android:height="90dp" />
+            </shape>
+        </rotate>
+    </item>
+    
+    <!-- OLA section (25% - 90 degrees) - #D2DA2C -->
+    <item android:gravity="center">
+        <rotate android:fromDegrees="216">
+            <shape android:shape="ring" android:innerRadius="32dp" android:thickness="8dp">
+                <solid android:color="#D2DA2C" />
+                <size android:width="90dp" android:height="90dp" />
+            </shape>
+        </rotate>
+    </item>
+    
+    <!-- Uber section (15% - 54 degrees) - Black -->
+    <item android:gravity="center">
+        <rotate android:fromDegrees="306">
+            <shape android:shape="ring" android:innerRadius="32dp" android:thickness="8dp">
+                <solid android:color="#000000" />
+                <size android:width="90dp" android:height="90dp" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list> 
