@@ -180,29 +180,6 @@
                     android:inputType="textMultiLine"
                     android:scrollbars="vertical"/>
 
-                <!-- Voice Input Button -->
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end">
-
-                    <LinearLayout
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/voice_button_background"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/ic_mic"
-                            android:tint="@color/white"/>
-
-                    </LinearLayout>
-
-                </FrameLayout>
 
             </LinearLayout>
 
@@ -215,6 +192,7 @@
 
                 <!-- Photo Option -->
                 <LinearLayout
+                    android:id="@+id/photoOption"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -241,6 +219,7 @@
 
                 <!-- Video Option -->
                 <LinearLayout
+                    android:id="@+id/videoOption"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -265,8 +244,9 @@
 
                 </LinearLayout>
 
-                <!-- Poll Option -->
+                <!-- Audio Option -->
                 <LinearLayout
+                    android:id="@+id/audioOption"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -278,14 +258,14 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_poll"
+                        android:src="@drawable/ic_speaker"
                         android:tint="#666666"
                         android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Poll"
+                        android:text="Audio"
                         android:textSize="14sp"
                         android:textColor="#666666"/>
 
@@ -293,38 +273,56 @@
 
             </LinearLayout>
 
-            <!-- Hashtags -->
+            <!-- Video Length Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡 Videos longer than 30 seconds will be automatically trimmed"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="#F0F0F0"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+            <!-- Selected Media Preview -->
             <LinearLayout
+                android:id="@+id/mediaPreviewContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="20dp">
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:text="#ridesharing"
-                    android:textSize="14sp"
-                    android:textColor="#666666"
-                    android:gravity="center"
-                    android:background="@drawable/hashtag_background"
-                    android:paddingHorizontal="12dp"
-                    android:layout_marginEnd="8dp"
-                    android:clickable="true"
-                    android:focusable="true"/>
+                    android:layout_height="wrap_content"
+                    android:text="Selected Media:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <ImageView
+                    android:id="@+id/mediaPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corner_background"/>
 
                 <TextView
+                    android:id="@+id/removeMediaButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:text="#earnmoney"
+                    android:layout_height="wrap_content"
+                    android:text="Remove"
                     android:textSize="14sp"
-                    android:textColor="#666666"
-                    android:gravity="center"
-                    android:background="@drawable/hashtag_background"
-                    android:paddingHorizontal="12dp"
+                    android:textColor="#E53935"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
                     android:clickable="true"
                     android:focusable="true"/>
-
             </LinearLayout>
 
             <!-- Audience Selection -->

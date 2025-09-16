@@ -7,16 +7,11 @@
     android:background="#FFEFEA">
 
     <!-- Main Content -->
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="120dp">
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
             
             <!-- Logo and Icons Row -->
             <LinearLayout
@@ -61,32 +56,6 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:padding="2dp"/>
 
-            </LinearLayout>
-
-            <!-- I'm free now toggle -->
-            <LinearLayout
-                android:id="@+id/freeNowBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end|center_vertical"
-                android:paddingStart="8dp"
-                android:paddingEnd="20dp"
-                android:paddingBottom="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="I'm free now"
-                    android:textColor="#666"
-                    android:textSize="16sp"
-                    android:layout_marginEnd="12dp"/>
-
-                <Switch
-                    android:id="@+id/freeNowSwitch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"/>
             </LinearLayout>
 
             <!-- Earnings Card - Modern Design -->
@@ -953,16 +922,98 @@
 
             </LinearLayout>
 
-            <!-- Posts RecyclerView -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/postsRecyclerView"
+            <!-- Free now toggle (hidden for v0) -->
+            <LinearLayout
+                android:id="@+id/freeNowBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="12dp"
+                android:visibility="gone">
+
+                <Switch
+                    android:id="@+id/freeNowSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"/>
+            </LinearLayout>
+
+
+            <!-- Posts Feed with Pull-to-Refresh -->
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:nestedScrollingEnabled="false"/>
+                android:layout_marginEnd="8dp">
+                
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    
+                    <!-- Loading GIF Animation -->
+                    <ImageView
+                        android:id="@+id/loadingGifView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:scaleType="centerInside"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/loading"/>
+                    
+                    <!-- Error Message -->
+                    <LinearLayout
+                        android:id="@+id/errorContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="32dp"
+                        android:visibility="gone">
+                        
+                        <TextView
+                            android:id="@+id/errorMessageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Failed to load posts"
+                            android:textSize="16sp"
+                            android:textColor="#666"
+                            android:gravity="center"
+                            android:layout_marginBottom="16dp"/>
+                        
+                        <TextView
+                            android:id="@+id/retryButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Retry"
+                            android:textSize="16sp"
+                            android:textColor="#E53935"
+                            android:textStyle="bold"
+                            android:background="@drawable/primary_button_background"
+                            android:paddingHorizontal="24dp"
+                            android:paddingVertical="12dp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+                    
+                    <!-- Posts RecyclerView -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/postsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="true"
+                        android:clipToPadding="false"
+                        android:paddingBottom="80dp"/>
+                        
+                </FrameLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+
 
     <!-- Bottom Navigation Bar with 5 evenly distributed items -->
     <LinearLayout
@@ -1111,7 +1162,7 @@
         android:id="@+id/earnButton"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:background="@drawable/circle_background"
+        android:background="@drawable/earn_button_red_background"
         android:elevation="12dp"
         android:padding="12dp"
         android:src="@drawable/ic_earn"
@@ -1119,4 +1170,4 @@
         app:layout_anchor="@+id/linearLayout2"
         app:layout_anchorGravity="top|center" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout> 
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

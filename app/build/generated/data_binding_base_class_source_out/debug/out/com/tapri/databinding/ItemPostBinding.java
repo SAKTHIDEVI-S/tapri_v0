@@ -4,9 +4,11 @@ package com.tapri.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -40,16 +42,34 @@ public final class ItemPostBinding implements ViewBinding {
   public final ImageView likeIcon;
 
   @NonNull
+  public final FrameLayout mediaContainer;
+
+  @NonNull
+  public final LinearLayout mediaPostContainer;
+
+  @NonNull
+  public final LinearLayout mediaTypeIndicator;
+
+  @NonNull
+  public final TextView mediaTypeText;
+
+  @NonNull
   public final ImageView moreOptions;
 
   @NonNull
   public final TextView postCaption;
 
   @NonNull
+  public final TextView postCaptionMedia;
+
+  @NonNull
   public final ImageView postImage;
 
   @NonNull
   public final TextView postTime;
+
+  @NonNull
+  public final VideoView postVideo;
 
   @NonNull
   public final LinearLayout saveButton;
@@ -67,18 +87,32 @@ public final class ItemPostBinding implements ViewBinding {
   public final ImageView shareIcon;
 
   @NonNull
+  public final LinearLayout textOnlyContainer;
+
+  @NonNull
   public final ImageView userAvatar;
 
   @NonNull
   public final TextView userName;
 
+  @NonNull
+  public final ImageView videoMuteButton;
+
+  @NonNull
+  public final ImageView videoPlayButton;
+
   private ItemPostBinding(@NonNull CardView rootView, @NonNull LinearLayout commentButton,
       @NonNull TextView commentCount, @NonNull ImageView commentIcon,
       @NonNull LinearLayout likeButton, @NonNull TextView likeCount, @NonNull ImageView likeIcon,
-      @NonNull ImageView moreOptions, @NonNull TextView postCaption, @NonNull ImageView postImage,
-      @NonNull TextView postTime, @NonNull LinearLayout saveButton, @NonNull ImageView saveIcon,
+      @NonNull FrameLayout mediaContainer, @NonNull LinearLayout mediaPostContainer,
+      @NonNull LinearLayout mediaTypeIndicator, @NonNull TextView mediaTypeText,
+      @NonNull ImageView moreOptions, @NonNull TextView postCaption,
+      @NonNull TextView postCaptionMedia, @NonNull ImageView postImage, @NonNull TextView postTime,
+      @NonNull VideoView postVideo, @NonNull LinearLayout saveButton, @NonNull ImageView saveIcon,
       @NonNull LinearLayout shareButton, @NonNull TextView shareCount, @NonNull ImageView shareIcon,
-      @NonNull ImageView userAvatar, @NonNull TextView userName) {
+      @NonNull LinearLayout textOnlyContainer, @NonNull ImageView userAvatar,
+      @NonNull TextView userName, @NonNull ImageView videoMuteButton,
+      @NonNull ImageView videoPlayButton) {
     this.rootView = rootView;
     this.commentButton = commentButton;
     this.commentCount = commentCount;
@@ -86,17 +120,26 @@ public final class ItemPostBinding implements ViewBinding {
     this.likeButton = likeButton;
     this.likeCount = likeCount;
     this.likeIcon = likeIcon;
+    this.mediaContainer = mediaContainer;
+    this.mediaPostContainer = mediaPostContainer;
+    this.mediaTypeIndicator = mediaTypeIndicator;
+    this.mediaTypeText = mediaTypeText;
     this.moreOptions = moreOptions;
     this.postCaption = postCaption;
+    this.postCaptionMedia = postCaptionMedia;
     this.postImage = postImage;
     this.postTime = postTime;
+    this.postVideo = postVideo;
     this.saveButton = saveButton;
     this.saveIcon = saveIcon;
     this.shareButton = shareButton;
     this.shareCount = shareCount;
     this.shareIcon = shareIcon;
+    this.textOnlyContainer = textOnlyContainer;
     this.userAvatar = userAvatar;
     this.userName = userName;
+    this.videoMuteButton = videoMuteButton;
+    this.videoPlayButton = videoPlayButton;
   }
 
   @Override
@@ -162,6 +205,30 @@ public final class ItemPostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mediaContainer;
+      FrameLayout mediaContainer = ViewBindings.findChildViewById(rootView, id);
+      if (mediaContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.mediaPostContainer;
+      LinearLayout mediaPostContainer = ViewBindings.findChildViewById(rootView, id);
+      if (mediaPostContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.mediaTypeIndicator;
+      LinearLayout mediaTypeIndicator = ViewBindings.findChildViewById(rootView, id);
+      if (mediaTypeIndicator == null) {
+        break missingId;
+      }
+
+      id = R.id.mediaTypeText;
+      TextView mediaTypeText = ViewBindings.findChildViewById(rootView, id);
+      if (mediaTypeText == null) {
+        break missingId;
+      }
+
       id = R.id.moreOptions;
       ImageView moreOptions = ViewBindings.findChildViewById(rootView, id);
       if (moreOptions == null) {
@@ -174,6 +241,12 @@ public final class ItemPostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.postCaptionMedia;
+      TextView postCaptionMedia = ViewBindings.findChildViewById(rootView, id);
+      if (postCaptionMedia == null) {
+        break missingId;
+      }
+
       id = R.id.postImage;
       ImageView postImage = ViewBindings.findChildViewById(rootView, id);
       if (postImage == null) {
@@ -183,6 +256,12 @@ public final class ItemPostBinding implements ViewBinding {
       id = R.id.postTime;
       TextView postTime = ViewBindings.findChildViewById(rootView, id);
       if (postTime == null) {
+        break missingId;
+      }
+
+      id = R.id.postVideo;
+      VideoView postVideo = ViewBindings.findChildViewById(rootView, id);
+      if (postVideo == null) {
         break missingId;
       }
 
@@ -216,6 +295,12 @@ public final class ItemPostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textOnlyContainer;
+      LinearLayout textOnlyContainer = ViewBindings.findChildViewById(rootView, id);
+      if (textOnlyContainer == null) {
+        break missingId;
+      }
+
       id = R.id.userAvatar;
       ImageView userAvatar = ViewBindings.findChildViewById(rootView, id);
       if (userAvatar == null) {
@@ -228,9 +313,23 @@ public final class ItemPostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.videoMuteButton;
+      ImageView videoMuteButton = ViewBindings.findChildViewById(rootView, id);
+      if (videoMuteButton == null) {
+        break missingId;
+      }
+
+      id = R.id.videoPlayButton;
+      ImageView videoPlayButton = ViewBindings.findChildViewById(rootView, id);
+      if (videoPlayButton == null) {
+        break missingId;
+      }
+
       return new ItemPostBinding((CardView) rootView, commentButton, commentCount, commentIcon,
-          likeButton, likeCount, likeIcon, moreOptions, postCaption, postImage, postTime,
-          saveButton, saveIcon, shareButton, shareCount, shareIcon, userAvatar, userName);
+          likeButton, likeCount, likeIcon, mediaContainer, mediaPostContainer, mediaTypeIndicator,
+          mediaTypeText, moreOptions, postCaption, postCaptionMedia, postImage, postTime, postVideo,
+          saveButton, saveIcon, shareButton, shareCount, shareIcon, textOnlyContainer, userAvatar,
+          userName, videoMuteButton, videoPlayButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

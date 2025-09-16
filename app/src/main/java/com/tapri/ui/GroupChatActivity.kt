@@ -1,283 +1,227 @@
 package com.tapri.ui
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.ScrollView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.tapri.R
-import java.text.SimpleDateFormat
-import java.util.*
+import com.tapri.ui.adapters.GroupChatAdapter
+import com.tapri.network.ApiClient
+import com.tapri.network.GroupsApi
+import com.tapri.network.GroupMessageDto
+import com.tapri.network.SendGroupMessageRequest
+import com.tapri.utils.SessionManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class GroupChatActivity : AppCompatActivity() {
+    
+    private lateinit var chatRecyclerView: RecyclerView
     private lateinit var messageInput: EditText
     private lateinit var sendButton: ImageView
-    private lateinit var messagesContainer: LinearLayout
-    private lateinit var messagesScrollView: ScrollView
-
+    private lateinit var groupNameTextView: TextView
+    private lateinit var backButton: ImageView
+    private lateinit var chatAdapter: GroupChatAdapter
+    private lateinit var sessionManager: SessionManager
+    private lateinit var groupsApi: GroupsApi
+    private val coroutineScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+    
+    private var groupId: Long = 0
+    private var groupName: String = ""
+    private val messages = mutableListOf<GroupMessageDto>()
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_chat)
-
-        // Initialize views
+        
+        // Initialize
+        sessionManager = SessionManager(this)
+        groupsApi = ApiClient.groupsRetrofit(sessionManager).create(GroupsApi::class.java)
+        
+        // Get group info from intent
+        groupId = intent.getLongExtra("groupId", 0)
+        groupName = intent.getStringExtra("groupName") ?: "Group Chat"
+        
+        // Find views
+        chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageInput = findViewById(R.id.messageInput)
         sendButton = findViewById(R.id.sendButton)
-        messagesContainer = findViewById(R.id.messagesContainer)
-        messagesScrollView = findViewById(R.id.messagesScrollView)
-
-        // Get group name from intent
-        val groupName = intent.getStringExtra("group_name") ?: "Ola Drivers"
-
-        // Set up click listeners
-        setupClickListeners()
-        setupBottomNavigation()
-    }
-
-    private fun setupClickListeners() {
-        // Back button
-        findViewById<TextView>(R.id.backButton).setOnClickListener {
-            finish()
-        }
-
-        // More options button
-        findViewById<ImageView>(R.id.moreOptionsButton).setOnClickListener {
-            Toast.makeText(this, "More options", Toast.LENGTH_SHORT).show()
-        }
-
-        // Send button
-        sendButton.setOnClickListener {
-            sendMessage()
-        }
-
-        // Send on Enter key
-        messageInput.setOnEditorActionListener { _, _, _ ->
-            sendMessage()
-            true
-        }
-    }
-
-    private fun sendMessage() {
-        val messageText = messageInput.text.toString().trim()
-        if (messageText.isNotEmpty()) {
-            addMessage(messageText, true)
-            messageInput.text.clear()
-            scrollToBottom()
-        }
-    }
-
-    private fun addMessage(message: String, isOwnMessage: Boolean) {
-        val currentTime = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(Date())
+        groupNameTextView = findViewById(R.id.groupNameTextView)
+        backButton = findViewById(R.id.backButton)
         
-        val messageLayout = LinearLayout(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            ).apply {
-                leftMargin = 0
-                topMargin = 0
-                rightMargin = 0
-                bottomMargin = 64 // 16dp bottom margin
-            }
-            orientation = LinearLayout.HORIZONTAL
-            if (isOwnMessage) {
-                gravity = android.view.Gravity.END
-            }
+        // Set group name
+        groupNameTextView.text = groupName
+        
+        // Set up RecyclerView
+        chatRecyclerView.layoutManager = LinearLayoutManager(this)
+        chatAdapter = GroupChatAdapter(messages, sessionManager)
+        chatRecyclerView.adapter = chatAdapter
+        
+        // Load messages
+        loadMessages()
+        
+        // Set up click listeners
+        backButton.setOnClickListener {
+            finish()
         }
-
-        if (!isOwnMessage) {
-            // Add profile picture for other users
-            val profilePic = ImageView(this).apply {
-                layoutParams = LinearLayout.LayoutParams(128, 128).apply {
-                    marginEnd = 32
-                }
-                setImageResource(R.drawable.ic_profile)
-                setColorFilter(resources.getColor(android.R.color.darker_gray, null))
+        
+        sendButton.setOnClickListener {
+            val message = messageInput.text.toString().trim()
+            if (message.isNotEmpty()) {
+                sendMessage(message)
+                messageInput.text.clear()
             }
-            messageLayout.addView(profilePic)
-        }
-
-        val messageContentLayout = LinearLayout(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            ).apply {
-                if (isOwnMessage) {
-                    marginStart = 240 // 60dp margin
-                } else {
-                    marginEnd = 240
-                }
-            }
-            orientation = LinearLayout.VERTICAL
-        }
-
-        if (!isOwnMessage) {
-            // Add sender name for other users
-            val senderName = TextView(this).apply {
-                layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    leftMargin = 0
-                    topMargin = 0
-                    rightMargin = 0
-                    bottomMargin = 16
-                }
-                text = "User"
-                textSize = 12f
-                setTextColor(resources.getColor(android.R.color.darker_gray, null))
-            }
-            messageContentLayout.addView(senderName)
-        }
-
-        // Message bubble
-        val messageBubble = LinearLayout(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            ).apply {
-                if (isOwnMessage) {
-                    gravity = android.view.Gravity.END
-                }
-            }
-            background = resources.getDrawable(
-                if (isOwnMessage) R.drawable.message_bubble_own else R.drawable.message_bubble_other,
-                null
-            )
-            setPadding(48, 48, 48, 48) // 12dp padding
-        }
-
-        val messageTextView = TextView(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            text = message
-            textSize = 14f
-            setTextColor(
-                resources.getColor(
-                    if (isOwnMessage) android.R.color.white else android.R.color.black,
-                    null
-                )
-            )
-            maxWidth = 960 // 240dp max width
-        }
-
-        messageBubble.addView(messageTextView)
-        messageContentLayout.addView(messageBubble)
-
-        // Time stamp
-        val timeStamp = TextView(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            ).apply {
-                leftMargin = 0
-                topMargin = 16 // 4dp top margin
-                rightMargin = 0
-                bottomMargin = 0
-                if (isOwnMessage) {
-                    gravity = android.view.Gravity.END
-                }
-            }
-            text = currentTime
-            textSize = 10f
-            setTextColor(resources.getColor(android.R.color.darker_gray, null))
-        }
-
-        messageContentLayout.addView(timeStamp)
-        messageLayout.addView(messageContentLayout)
-        messagesContainer.addView(messageLayout)
-    }
-
-    private fun scrollToBottom() {
-        messagesScrollView.post {
-            messagesScrollView.fullScroll(ScrollView.FOCUS_DOWN)
         }
     }
-
-    private fun setupBottomNavigation() {
-        val homeNav = findViewById<LinearLayout>(R.id.homeNav)
-        val tapriNav = findViewById<LinearLayout>(R.id.tapriNav)
-        val earnNav = findViewById<LinearLayout>(R.id.earnNav)
-        val infoNav = findViewById<LinearLayout>(R.id.infoNav)
-        val tipsNav = findViewById<LinearLayout>(R.id.tipsNav)
-        val earnButton = findViewById<ImageView>(R.id.earnButton)
-
-        // Set Tapri as selected by default
-        updateNavigationSelection(tapriNav, true)
-
-        homeNav.setOnClickListener {
-            updateNavigationSelection(homeNav, true)
-            updateNavigationSelection(tapriNav, false)
-            updateNavigationSelection(infoNav, false)
-            updateNavigationSelection(tipsNav, false)
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        tapriNav.setOnClickListener {
-            updateNavigationSelection(homeNav, false)
-            updateNavigationSelection(tapriNav, true)
-            updateNavigationSelection(infoNav, false)
-            updateNavigationSelection(tipsNav, false)
-            val intent = Intent(this, GroupsActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        earnNav.setOnClickListener {
-            updateNavigationSelection(homeNav, false)
-            updateNavigationSelection(tapriNav, false)
-            updateNavigationSelection(infoNav, false)
-            updateNavigationSelection(tipsNav, false)
-            val intent = Intent(this, EarnActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        earnButton.setOnClickListener {
-            val intent = Intent(this, EarnActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        infoNav.setOnClickListener {
-            updateNavigationSelection(homeNav, false)
-            updateNavigationSelection(tapriNav, false)
-            updateNavigationSelection(infoNav, true)
-            updateNavigationSelection(tipsNav, false)
-            val intent = Intent(this, InfoActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        tipsNav.setOnClickListener {
-            updateNavigationSelection(homeNav, false)
-            updateNavigationSelection(tapriNav, false)
-            updateNavigationSelection(infoNav, false)
-            updateNavigationSelection(tipsNav, true)
-            val intent = Intent(this, TipsActivity::class.java)
-            startActivity(intent)
-            finish()
+    
+    private fun loadMessages() {
+        coroutineScope.launch {
+            try {
+                android.util.Log.d("GroupChatActivity", "Loading messages for group $groupId")
+                android.util.Log.d("GroupChatActivity", "Auth token: ${sessionManager.getAuthToken()}")
+                android.util.Log.d("GroupChatActivity", "Is logged in: ${sessionManager.isLoggedIn()}")
+                
+                val response = groupsApi.getGroupMessages(groupId)
+                withContext(Dispatchers.Main) {
+                    if (response.isSuccessful) {
+                        val messagesResponse = response.body()
+                        if (messagesResponse != null) {
+                            messages.clear()
+                            messages.addAll(messagesResponse.messages.reversed()) // Reverse to show oldest first
+                            chatAdapter.notifyDataSetChanged()
+                            chatRecyclerView.smoothScrollToPosition(messages.size - 1)
+                            
+                            // Mark messages as read
+                            markMessagesAsRead()
+                        }
+                    } else {
+                        android.util.Log.e("GroupChatActivity", "Failed to load messages: ${response.code()}")
+                        android.util.Log.e("GroupChatActivity", "Response headers: ${response.headers()}")
+                        val errorBody = response.errorBody()?.string()
+                        android.util.Log.e("GroupChatActivity", "Error body: $errorBody")
+                        
+                        when (response.code()) {
+                            401, 403 -> {
+                                android.util.Log.w("GroupChatActivity", "Authentication error, attempting token refresh...")
+                                if (sessionManager.canRefreshToken()) {
+                                    attemptTokenRefreshAndRetry()
+                                } else {
+                                    Toast.makeText(this@GroupChatActivity, "Session expired. Please login again.", Toast.LENGTH_SHORT).show()
+                                    sessionManager.clearSession()
+                                    finish()
+                                }
+                            }
+                            else -> {
+                                Toast.makeText(this@GroupChatActivity, "Failed to load messages: ${response.code()}", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("GroupChatActivity", "Exception while loading messages: ${e.message}", e)
+                withContext(Dispatchers.Main) {
+                    when {
+                        e.message?.contains("401") == true || e.message?.contains("403") == true -> {
+                            if (sessionManager.canRefreshToken()) {
+                                attemptTokenRefreshAndRetry()
+                            } else {
+                                Toast.makeText(this@GroupChatActivity, "Session expired. Please login again.", Toast.LENGTH_SHORT).show()
+                                sessionManager.clearSession()
+                                finish()
+                            }
+                        }
+                        else -> {
+                            Toast.makeText(this@GroupChatActivity, "Network error", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+            }
         }
     }
-
-    private fun updateNavigationSelection(navItem: LinearLayout, isSelected: Boolean) {
-        val icon = navItem.getChildAt(0) as ImageView
-        val text = navItem.getChildAt(1) as TextView
-
-        if (isSelected) {
-            icon.setColorFilter(resources.getColor(R.color.red, null))
-            text.setTextColor(resources.getColor(R.color.red, null))
-        } else {
-            icon.setColorFilter(resources.getColor(android.R.color.black, null))
-            text.setTextColor(resources.getColor(android.R.color.black, null))
+    
+    private fun sendMessage(content: String) {
+        coroutineScope.launch {
+            try {
+                val request = SendGroupMessageRequest(content = content)
+                val response = groupsApi.sendGroupMessage(groupId, request)
+                withContext(Dispatchers.Main) {
+                    if (response.isSuccessful) {
+                        val newMessage = response.body()
+                        if (newMessage != null) {
+                            messages.add(newMessage)
+                            chatAdapter.notifyItemInserted(messages.size - 1)
+                            chatRecyclerView.smoothScrollToPosition(messages.size - 1)
+                        }
+                    } else {
+                        android.util.Log.e("GroupChatActivity", "Failed to send message: ${response.code()}")
+                        when (response.code()) {
+                            401, 403 -> {
+                                android.util.Log.w("GroupChatActivity", "Authentication error while sending message, attempting token refresh...")
+                                if (sessionManager.canRefreshToken()) {
+                                    attemptTokenRefreshAndRetry()
+                                } else {
+                                    Toast.makeText(this@GroupChatActivity, "Session expired. Please login again.", Toast.LENGTH_SHORT).show()
+                                    sessionManager.clearSession()
+                                    finish()
+                                }
+                            }
+                            else -> {
+                                Toast.makeText(this@GroupChatActivity, "Failed to send message", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("GroupChatActivity", "Exception while sending message: ${e.message}", e)
+                withContext(Dispatchers.Main) {
+                    when {
+                        e.message?.contains("401") == true || e.message?.contains("403") == true -> {
+                            if (sessionManager.canRefreshToken()) {
+                                attemptTokenRefreshAndRetry()
+                            } else {
+                                Toast.makeText(this@GroupChatActivity, "Session expired. Please login again.", Toast.LENGTH_SHORT).show()
+                                sessionManager.clearSession()
+                                finish()
+                            }
+                        }
+                        else -> {
+                            Toast.makeText(this@GroupChatActivity, "Network error", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+            }
         }
     }
-} 
+    
+    private fun markMessagesAsRead() {
+        coroutineScope.launch {
+            try {
+                groupsApi.markMessagesAsRead(groupId)
+            } catch (e: Exception) {
+                android.util.Log.e("GroupChatActivity", "Exception while marking messages as read: ${e.message}", e)
+            }
+        }
+    }
+    
+    private fun attemptTokenRefreshAndRetry() {
+        android.util.Log.d("GroupChatActivity", "Attempting token refresh and retry...")
+        com.tapri.utils.TokenRefreshHelper.refreshTokenAsync(
+            sessionManager = sessionManager,
+            coroutineScope = coroutineScope,
+            onSuccess = {
+                android.util.Log.d("GroupChatActivity", "Token refreshed successfully, retrying load messages")
+                loadMessages()
+            },
+            onFailure = {
+                android.util.Log.e("GroupChatActivity", "Token refresh failed, redirecting to login")
+                sessionManager.clearSession()
+                Toast.makeText(this@GroupChatActivity, "Session expired, please login again", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+        )
+    }
+}

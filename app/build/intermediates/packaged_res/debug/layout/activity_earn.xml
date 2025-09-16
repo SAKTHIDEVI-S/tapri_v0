@@ -128,248 +128,12 @@
 
             </LinearLayout>
 
-            <!-- Job Card 1 -->
-            <LinearLayout
+            <!-- Dynamic Jobs List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/jobsRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/job_card_background"
-                android:padding="16dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center_vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/jobCard1">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Grocery Delivery"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="120/hr"
-                        android:textSize="16sp"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="JP Nagar • 11:00 AM - 3:00 PM"
-                        android:textSize="14sp"
-                        android:textColor="#666666"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/claimButton1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Claim"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/claim_button_background"
-                        android:minWidth="80dp"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:paddingHorizontal="16dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View job details"
-                        android:textSize="12sp"
-                        android:textColor="#666666"
-                        android:layout_marginTop="4dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/viewJobDetails1"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- Job Card 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/job_card_background"
-                android:padding="16dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center_vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/jobCard2">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Grocery Delivery"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="120/hr"
-                        android:textSize="16sp"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="JP Nagar • 11:00 AM - 3:00 PM"
-                        android:textSize="14sp"
-                        android:textColor="#666666"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/claimButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Claim"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/claim_button_background"
-                        android:minWidth="80dp"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:paddingHorizontal="16dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View job details"
-                        android:textSize="12sp"
-                        android:textColor="#666666"
-                        android:layout_marginTop="4dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/viewJobDetails2"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- Job Card 3 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/job_card_background"
-                android:padding="16dp"
-                android:layout_marginBottom="24dp"
-                android:gravity="center_vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/jobCard3">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Grocery Delivery"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="120/hr"
-                        android:textSize="16sp"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="JP Nagar • 11:00 AM - 3:00 PM"
-                        android:textSize="14sp"
-                        android:textColor="#666666"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/claimButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Claim"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/claim_button_background"
-                        android:minWidth="80dp"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:paddingHorizontal="16dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View job details"
-                        android:textSize="12sp"
-                        android:textColor="#666666"
-                        android:layout_marginTop="4dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/viewJobDetails3"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
+                android:nestedScrollingEnabled="false"/>
 
             <!-- Post a Job Button -->
             <LinearLayout
@@ -402,7 +166,7 @@
 
             </LinearLayout>
 
-            <!-- Refer & Earn Section - Updated to match image -->
+            <!-- Refer & Earn Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -411,14 +175,12 @@
                 android:padding="20dp"
                 android:layout_marginBottom="24dp">
 
-                <!-- Top Section: Text and Image -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="16dp">
 
-                    <!-- Left Side: Text Content -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -444,16 +206,14 @@
 
                     </LinearLayout>
 
-                                         <!-- Right Side: Image -->
-                     <ImageView
-                         android:layout_width="100dp"
-                         android:layout_height="100dp"
-                         android:src="@drawable/refer"
-                         android:scaleType="fitCenter"/>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/refer"
+                        android:scaleType="fitCenter"/>
 
                 </LinearLayout>
 
-                <!-- Bottom Section: Full Width Button -->
                 <TextView
                     android:id="@+id/referNowButton"
                     android:layout_width="match_parent"
@@ -473,7 +233,7 @@
 
     </ScrollView>
 
-    <!-- Bottom Navigation Bar with 5 evenly distributed items -->
+    <!-- Bottom Navigation Bar (unchanged) -->
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -486,7 +246,6 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp">
 
-        <!-- Home -->
         <LinearLayout
             android:id="@+id/homeNav"
             android:layout_width="0dp"
@@ -513,7 +272,6 @@
 
         </LinearLayout>
 
-        <!-- Tapri -->
         <LinearLayout
             android:id="@+id/tapriNav"
             android:layout_width="0dp"
@@ -540,7 +298,6 @@
 
         </LinearLayout>
 
-        <!-- Earn -->
         <LinearLayout
             android:id="@+id/earnNav"
             android:layout_width="0dp"
@@ -560,7 +317,6 @@
 
         </LinearLayout>
 
-        <!-- Info -->
         <LinearLayout
             android:id="@+id/infoNav"
             android:layout_width="0dp"
@@ -587,7 +343,6 @@
 
         </LinearLayout>
 
-        <!-- Tips -->
         <LinearLayout
             android:id="@+id/tipsNav"
             android:layout_width="0dp"
@@ -616,7 +371,7 @@
 
     </LinearLayout>
 
-         <ImageView
+     <ImageView
          android:id="@+id/earnButton"
          android:layout_width="56dp"
          android:layout_height="56dp"
@@ -628,108 +383,102 @@
          app:layout_anchor="@+id/linearLayout2"
          app:layout_anchorGravity="top|center" />
 
-             <!-- Bottom Popup Card for Claimed Job Details -->
+    <!-- Bottom Popup Card for claimed jobs remains (unchanged) -->
+    <LinearLayout
+        android:id="@+id/bottomPopupCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:id="@+id/bottomPopupCard"
+            android:id="@+id/singleJobView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="100dp"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/job_card_background"
+            android:elevation="16dp"
+            android:padding="12dp">
 
-            <!-- Single Job View (for single claimed job) -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ongoing"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="12dp"/>
+
             <LinearLayout
-                android:id="@+id/singleJobView"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@drawable/job_card_background"
-                android:elevation="16dp"
-                android:padding="12dp">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <!-- Job Icon -->
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ongoing"
-                    android:scaleType="fitCenter"
-                    android:layout_marginEnd="12dp"/>
-
-                <!-- Job Details -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/ongoingJobTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ongoing: Grocery Delivery"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#1A1A1A"
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:id="@+id/ongoingJobTime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="45 mins left"
-                        android:textSize="14sp"
-                        android:textColor="#666666"/>
-
-                </LinearLayout>
-
-                <!-- View Button -->
                 <TextView
-                    android:id="@+id/viewJobButton"
+                    android:id="@+id/ongoingJobTitle"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="View"
-                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:text="Ongoing: Grocery Delivery"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/white"
-                    android:background="@drawable/claim_button_background"
-                    android:minWidth="80dp"
-                    android:gravity="center"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:paddingHorizontal="16dp"/>
+                    android:textColor="#1A1A1A"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/ongoingJobTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45 mins left"
+                    android:textSize="14sp"
+                    android:textColor="#666666"/>
 
             </LinearLayout>
 
-            <!-- Multiple Jobs Horizontal Scroll (replaces single job view when multiple jobs) -->
-            <HorizontalScrollView
-                android:id="@+id/multipleJobsScrollView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:scrollbars="none"
-                android:paddingHorizontal="0dp">
-
-                <LinearLayout
-                    android:id="@+id/claimedJobsContainer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"/>
-
-            </HorizontalScrollView>
-
-            <!-- Carousel Dots Indicator (always present, but only visible for multiple jobs) -->
-            <LinearLayout
-                android:id="@+id/carouselDotsContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+            <TextView
+                android:id="@+id/viewJobButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="View"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/claim_button_background"
+                android:minWidth="80dp"
                 android:gravity="center"
-                android:layout_marginTop="8dp"
-                android:visibility="gone"/>
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="16dp"/>
 
         </LinearLayout>
 
- </androidx.coordinatorlayout.widget.CoordinatorLayout> 
+        <HorizontalScrollView
+            android:id="@+id/multipleJobsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:paddingHorizontal="0dp">
+
+            <LinearLayout
+                android:id="@+id/claimedJobsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"/>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/carouselDotsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout> 

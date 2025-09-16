@@ -1,97 +1,109 @@
-package com.tapri.network
+﻿package com.tapri.network
 
-import okhttp3.MultipartBody
-import retrofit2.Call
-import retrofit2.http.*
-
-// Data class for user - moved outside interface for accessibility
-data class User(
-    val id: Long? = null,
-    val name: String,
-    val mobile: String,
-    val city: String? = null,
-    val state: String? = null,
-    val email: String? = null,
-    val profilePictureUrl: String? = null,
-    val rating: Double? = null,
-    val totalRides: Int? = null,
-    val totalEarnings: Double? = null,
-    val vehicleType: String? = null,
-    val vehicleNumber: String? = null,
-    val createdAt: String? = null,
-    val lastLogin: String? = null,
-    val isVerified: Boolean = false,
-    val referralCode: String? = null,
-    val referredBy: String? = null
-)
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.Header
+import retrofit2.http.POST
 
 interface AuthApi {
+    @POST("otp")
+    suspend fun sendOtp(@Body request: OtpRequest): Response<OtpResponse>
+    
+    @POST("verify")
+    suspend fun verifyOtp(@Body request: VerifyRequest): Response<VerifyResponse>
+    
+    @POST("verify")
+    suspend fun verifyOtpRaw(@Body request: Map<String, String>): Response<Map<String, Any>>
+    
+    @POST("signup/complete")
+    suspend fun completeSignup(
+        @Header("Temp-Token") tempToken: String,
+        @Body request: SignupRequest
+    ): Response<SignupResponse>
+    
+    @POST("signup/complete")
+    suspend fun completeSignupRaw(
+        @Header("Temp-Token") tempToken: String,
+        @Body request: Map<String, String>
+    ): Response<Map<String, Any>>
+
+    // New: direct signup without OTP
     @POST("signup")
-    fun signup(@Body user: User): Call<User>
+    suspend fun directSignup(@Body request: DirectSignupRequest): Response<SignupResponse>
     
-    @POST("login")
-    fun login(@Body loginRequest: LoginRequest): Call<LoginResponse>
+    @POST("signup")
+    suspend fun directSignupRaw(@Body request: Map<String, String>): Response<Map<String, Any>>
     
-    @POST("send-otp")
-    fun sendOtp(@Body otpRequest: OtpRequest): Call<OtpResponse>
-    
-    @POST("verify-otp")
-    fun verifyOtp(@Body verifyRequest: VerifyRequest): Call<VerifyResponse>
-    
-    // User profile endpoints
-    @GET("users/profile/{userId}")
-    fun getUserProfile(@Path("userId") userId: Long): Call<User>
-    
-    @GET("users/profile/mobile/{mobile}")
-    fun getUserProfileByMobile(@Path("mobile") mobile: String): Call<User>
-    
-    @PUT("users/profile/{userId}")
-    fun updateUserProfile(@Path("userId") userId: Long, @Body user: User): Call<User>
-    
-    @Multipart
-    @POST("users/profile-picture/{userId}")
-    fun uploadProfilePicture(
-        @Path("userId") userId: Long,
-        @Part file: MultipartBody.Part
-    ): Call<Map<String, String>>
-    
-    @POST("users/login/{userId}")
-    fun updateLastLogin(@Path("userId") userId: Long): Call<Map<String, String>>
-    
-    @POST("users/rating/{userId}")
-    fun updateRating(@Path("userId") userId: Long, @Body request: Map<String, Double>): Call<Map<String, String>>
-    
-    @POST("users/earnings/{userId}")
-    fun updateEarnings(@Path("userId") userId: Long, @Body request: Map<String, Double>): Call<Map<String, String>>
+    // Token refresh endpoint
+    @POST("refresh")
+    suspend fun refreshToken(@Body request: RefreshTokenRequest): Response<RefreshTokenResponse>
 }
 
-data class LoginRequest(
-    val mobile: String,
-    val password: String
-)
-
-data class LoginResponse(
-    val success: Boolean,
-    val message: String,
-    val user: User? = null
-)
-
 data class OtpRequest(
-    val mobile: String
+    val phone: String,
+    val purpose: String // "signup" or "login"
 )
 
 data class OtpResponse(
-    val success: Boolean,
     val message: String
 )
 
 data class VerifyRequest(
-    val mobile: String,
-    val otp: String
+    val phone: String,
+    val code: String
 )
 
 data class VerifyResponse(
-    val success: Boolean,
-    val message: String,
+    val needsSignup: Boolean? = null,
+    val tempToken: String? = null,
+    val jwt: String? = null,
     val user: User? = null
-) 
+)
+
+data class SignupRequest(
+    val name: String,
+    val city: String? = null
+)
+
+data class SignupResponse(
+    val jwt: String,
+    val user: User
+)
+
+// New: direct signup request
+
+data class DirectSignupRequest(
+    val name: String,
+    val phone: String,
+    val city: String? = null,
+    val state: String? = null
+)
+
+data class RefreshTokenRequest(
+    val refreshToken: String
+)
+
+data class RefreshTokenResponse(
+    val jwt: String,
+    val refreshToken: String? = null,
+    val expiresIn: Long? = null
+)
+
+data class User(
+    val id: Long,
+    val phone: String,
+    val name: String,
+    val city: String? = null,
+    val state: String? = null,
+    val bio: String? = null,
+    val profilePhotoUrl: String? = null,
+    val profilePicture: String? = null,
+    val lastSeen: String? = null,
+    val lastLogin: String? = null,
+    val lastSeenVisible: Boolean? = null,
+    val rating: Double? = null,
+    val earnings: Double? = null,
+    val isActive: Boolean? = null,
+    val createdAt: String? = null,
+    val updatedAt: String? = null
+)

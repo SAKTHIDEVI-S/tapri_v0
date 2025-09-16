@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.tapri.R;
@@ -32,15 +33,6 @@ public final class ActivityEarnBinding implements ViewBinding {
   public final LinearLayout carouselDotsContainer;
 
   @NonNull
-  public final TextView claimButton1;
-
-  @NonNull
-  public final TextView claimButton2;
-
-  @NonNull
-  public final TextView claimButton3;
-
-  @NonNull
   public final LinearLayout claimedJobsContainer;
 
   @NonNull
@@ -59,13 +51,7 @@ public final class ActivityEarnBinding implements ViewBinding {
   public final LinearLayout infoNav;
 
   @NonNull
-  public final LinearLayout jobCard1;
-
-  @NonNull
-  public final LinearLayout jobCard2;
-
-  @NonNull
-  public final LinearLayout jobCard3;
+  public final RecyclerView jobsRecycler;
 
   @NonNull
   public final LinearLayout linearLayout2;
@@ -109,46 +95,28 @@ public final class ActivityEarnBinding implements ViewBinding {
   @NonNull
   public final TextView viewJobButton;
 
-  @NonNull
-  public final TextView viewJobDetails1;
-
-  @NonNull
-  public final TextView viewJobDetails2;
-
-  @NonNull
-  public final TextView viewJobDetails3;
-
   private ActivityEarnBinding(@NonNull CoordinatorLayout rootView, @NonNull TextView backButton,
       @NonNull LinearLayout bottomPopupCard, @NonNull LinearLayout carouselDotsContainer,
-      @NonNull TextView claimButton1, @NonNull TextView claimButton2,
-      @NonNull TextView claimButton3, @NonNull LinearLayout claimedJobsContainer,
-      @NonNull LinearLayout dateTabs, @NonNull ImageView earnButton, @NonNull LinearLayout earnNav,
-      @NonNull LinearLayout homeNav, @NonNull LinearLayout infoNav, @NonNull LinearLayout jobCard1,
-      @NonNull LinearLayout jobCard2, @NonNull LinearLayout jobCard3,
+      @NonNull LinearLayout claimedJobsContainer, @NonNull LinearLayout dateTabs,
+      @NonNull ImageView earnButton, @NonNull LinearLayout earnNav, @NonNull LinearLayout homeNav,
+      @NonNull LinearLayout infoNav, @NonNull RecyclerView jobsRecycler,
       @NonNull LinearLayout linearLayout2, @NonNull HorizontalScrollView multipleJobsScrollView,
       @NonNull TextView nextWeekTab, @NonNull TextView nowTab, @NonNull TextView ongoingJobTime,
       @NonNull TextView ongoingJobTitle, @NonNull LinearLayout postJobButton,
       @NonNull TextView referNowButton, @NonNull LinearLayout singleJobView,
       @NonNull LinearLayout tapriNav, @NonNull LinearLayout tipsNav, @NonNull TextView tomorrowTab,
-      @NonNull LinearLayout topBar, @NonNull TextView viewJobButton,
-      @NonNull TextView viewJobDetails1, @NonNull TextView viewJobDetails2,
-      @NonNull TextView viewJobDetails3) {
+      @NonNull LinearLayout topBar, @NonNull TextView viewJobButton) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.bottomPopupCard = bottomPopupCard;
     this.carouselDotsContainer = carouselDotsContainer;
-    this.claimButton1 = claimButton1;
-    this.claimButton2 = claimButton2;
-    this.claimButton3 = claimButton3;
     this.claimedJobsContainer = claimedJobsContainer;
     this.dateTabs = dateTabs;
     this.earnButton = earnButton;
     this.earnNav = earnNav;
     this.homeNav = homeNav;
     this.infoNav = infoNav;
-    this.jobCard1 = jobCard1;
-    this.jobCard2 = jobCard2;
-    this.jobCard3 = jobCard3;
+    this.jobsRecycler = jobsRecycler;
     this.linearLayout2 = linearLayout2;
     this.multipleJobsScrollView = multipleJobsScrollView;
     this.nextWeekTab = nextWeekTab;
@@ -163,9 +131,6 @@ public final class ActivityEarnBinding implements ViewBinding {
     this.tomorrowTab = tomorrowTab;
     this.topBar = topBar;
     this.viewJobButton = viewJobButton;
-    this.viewJobDetails1 = viewJobDetails1;
-    this.viewJobDetails2 = viewJobDetails2;
-    this.viewJobDetails3 = viewJobDetails3;
   }
 
   @Override
@@ -213,24 +178,6 @@ public final class ActivityEarnBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.claimButton1;
-      TextView claimButton1 = ViewBindings.findChildViewById(rootView, id);
-      if (claimButton1 == null) {
-        break missingId;
-      }
-
-      id = R.id.claimButton2;
-      TextView claimButton2 = ViewBindings.findChildViewById(rootView, id);
-      if (claimButton2 == null) {
-        break missingId;
-      }
-
-      id = R.id.claimButton3;
-      TextView claimButton3 = ViewBindings.findChildViewById(rootView, id);
-      if (claimButton3 == null) {
-        break missingId;
-      }
-
       id = R.id.claimedJobsContainer;
       LinearLayout claimedJobsContainer = ViewBindings.findChildViewById(rootView, id);
       if (claimedJobsContainer == null) {
@@ -267,21 +214,9 @@ public final class ActivityEarnBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.jobCard1;
-      LinearLayout jobCard1 = ViewBindings.findChildViewById(rootView, id);
-      if (jobCard1 == null) {
-        break missingId;
-      }
-
-      id = R.id.jobCard2;
-      LinearLayout jobCard2 = ViewBindings.findChildViewById(rootView, id);
-      if (jobCard2 == null) {
-        break missingId;
-      }
-
-      id = R.id.jobCard3;
-      LinearLayout jobCard3 = ViewBindings.findChildViewById(rootView, id);
-      if (jobCard3 == null) {
+      id = R.id.jobsRecycler;
+      RecyclerView jobsRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (jobsRecycler == null) {
         break missingId;
       }
 
@@ -369,30 +304,11 @@ public final class ActivityEarnBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.viewJobDetails1;
-      TextView viewJobDetails1 = ViewBindings.findChildViewById(rootView, id);
-      if (viewJobDetails1 == null) {
-        break missingId;
-      }
-
-      id = R.id.viewJobDetails2;
-      TextView viewJobDetails2 = ViewBindings.findChildViewById(rootView, id);
-      if (viewJobDetails2 == null) {
-        break missingId;
-      }
-
-      id = R.id.viewJobDetails3;
-      TextView viewJobDetails3 = ViewBindings.findChildViewById(rootView, id);
-      if (viewJobDetails3 == null) {
-        break missingId;
-      }
-
       return new ActivityEarnBinding((CoordinatorLayout) rootView, backButton, bottomPopupCard,
-          carouselDotsContainer, claimButton1, claimButton2, claimButton3, claimedJobsContainer,
-          dateTabs, earnButton, earnNav, homeNav, infoNav, jobCard1, jobCard2, jobCard3,
-          linearLayout2, multipleJobsScrollView, nextWeekTab, nowTab, ongoingJobTime,
-          ongoingJobTitle, postJobButton, referNowButton, singleJobView, tapriNav, tipsNav,
-          tomorrowTab, topBar, viewJobButton, viewJobDetails1, viewJobDetails2, viewJobDetails3);
+          carouselDotsContainer, claimedJobsContainer, dateTabs, earnButton, earnNav, homeNav,
+          infoNav, jobsRecycler, linearLayout2, multipleJobsScrollView, nextWeekTab, nowTab,
+          ongoingJobTime, ongoingJobTitle, postJobButton, referNowButton, singleJobView, tapriNav,
+          tipsNav, tomorrowTab, topBar, viewJobButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

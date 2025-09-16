@@ -23,25 +23,38 @@ public final class BottomSheetCommentsBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView commentCount;
+  public final EditText commentInput;
 
   @NonNull
-  public final EditText commentInput;
+  public final LinearLayout commentInputContainer;
 
   @NonNull
   public final RecyclerView commentsRecyclerView;
 
   @NonNull
-  public final ImageView sendCommentButton;
+  public final ImageView loadingView;
 
-  private BottomSheetCommentsBinding(@NonNull LinearLayout rootView, @NonNull TextView commentCount,
-      @NonNull EditText commentInput, @NonNull RecyclerView commentsRecyclerView,
-      @NonNull ImageView sendCommentButton) {
+  @NonNull
+  public final LinearLayout noCommentsState;
+
+  @NonNull
+  public final TextView postButton;
+
+  @NonNull
+  public final ImageView userAvatar;
+
+  private BottomSheetCommentsBinding(@NonNull LinearLayout rootView, @NonNull EditText commentInput,
+      @NonNull LinearLayout commentInputContainer, @NonNull RecyclerView commentsRecyclerView,
+      @NonNull ImageView loadingView, @NonNull LinearLayout noCommentsState,
+      @NonNull TextView postButton, @NonNull ImageView userAvatar) {
     this.rootView = rootView;
-    this.commentCount = commentCount;
     this.commentInput = commentInput;
+    this.commentInputContainer = commentInputContainer;
     this.commentsRecyclerView = commentsRecyclerView;
-    this.sendCommentButton = sendCommentButton;
+    this.loadingView = loadingView;
+    this.noCommentsState = noCommentsState;
+    this.postButton = postButton;
+    this.userAvatar = userAvatar;
   }
 
   @Override
@@ -71,15 +84,15 @@ public final class BottomSheetCommentsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.commentCount;
-      TextView commentCount = ViewBindings.findChildViewById(rootView, id);
-      if (commentCount == null) {
-        break missingId;
-      }
-
       id = R.id.commentInput;
       EditText commentInput = ViewBindings.findChildViewById(rootView, id);
       if (commentInput == null) {
+        break missingId;
+      }
+
+      id = R.id.commentInputContainer;
+      LinearLayout commentInputContainer = ViewBindings.findChildViewById(rootView, id);
+      if (commentInputContainer == null) {
         break missingId;
       }
 
@@ -89,14 +102,33 @@ public final class BottomSheetCommentsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.sendCommentButton;
-      ImageView sendCommentButton = ViewBindings.findChildViewById(rootView, id);
-      if (sendCommentButton == null) {
+      id = R.id.loadingView;
+      ImageView loadingView = ViewBindings.findChildViewById(rootView, id);
+      if (loadingView == null) {
         break missingId;
       }
 
-      return new BottomSheetCommentsBinding((LinearLayout) rootView, commentCount, commentInput,
-          commentsRecyclerView, sendCommentButton);
+      id = R.id.noCommentsState;
+      LinearLayout noCommentsState = ViewBindings.findChildViewById(rootView, id);
+      if (noCommentsState == null) {
+        break missingId;
+      }
+
+      id = R.id.postButton;
+      TextView postButton = ViewBindings.findChildViewById(rootView, id);
+      if (postButton == null) {
+        break missingId;
+      }
+
+      id = R.id.userAvatar;
+      ImageView userAvatar = ViewBindings.findChildViewById(rootView, id);
+      if (userAvatar == null) {
+        break missingId;
+      }
+
+      return new BottomSheetCommentsBinding((LinearLayout) rootView, commentInput,
+          commentInputContainer, commentsRecyclerView, loadingView, noCommentsState, postButton,
+          userAvatar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

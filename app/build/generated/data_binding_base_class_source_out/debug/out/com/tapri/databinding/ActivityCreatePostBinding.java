@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -30,13 +31,28 @@ public final class ActivityCreatePostBinding implements ViewBinding {
   public final TextView audienceText;
 
   @NonNull
+  public final LinearLayout audioOption;
+
+  @NonNull
   public final TextView backButton;
 
   @NonNull
   public final EditText contentInput;
 
   @NonNull
+  public final ImageView mediaPreview;
+
+  @NonNull
+  public final LinearLayout mediaPreviewContainer;
+
+  @NonNull
+  public final LinearLayout photoOption;
+
+  @NonNull
   public final TextView postButton;
+
+  @NonNull
+  public final TextView removeMediaButton;
 
   @NonNull
   public final LinearLayout shareTipCard;
@@ -44,20 +60,32 @@ public final class ActivityCreatePostBinding implements ViewBinding {
   @NonNull
   public final LinearLayout trafficAlertCard;
 
+  @NonNull
+  public final LinearLayout videoOption;
+
   private ActivityCreatePostBinding(@NonNull LinearLayout rootView,
       @NonNull LinearLayout askHelpCard, @NonNull LinearLayout audienceDropdown,
-      @NonNull TextView audienceText, @NonNull TextView backButton, @NonNull EditText contentInput,
-      @NonNull TextView postButton, @NonNull LinearLayout shareTipCard,
-      @NonNull LinearLayout trafficAlertCard) {
+      @NonNull TextView audienceText, @NonNull LinearLayout audioOption,
+      @NonNull TextView backButton, @NonNull EditText contentInput, @NonNull ImageView mediaPreview,
+      @NonNull LinearLayout mediaPreviewContainer, @NonNull LinearLayout photoOption,
+      @NonNull TextView postButton, @NonNull TextView removeMediaButton,
+      @NonNull LinearLayout shareTipCard, @NonNull LinearLayout trafficAlertCard,
+      @NonNull LinearLayout videoOption) {
     this.rootView = rootView;
     this.askHelpCard = askHelpCard;
     this.audienceDropdown = audienceDropdown;
     this.audienceText = audienceText;
+    this.audioOption = audioOption;
     this.backButton = backButton;
     this.contentInput = contentInput;
+    this.mediaPreview = mediaPreview;
+    this.mediaPreviewContainer = mediaPreviewContainer;
+    this.photoOption = photoOption;
     this.postButton = postButton;
+    this.removeMediaButton = removeMediaButton;
     this.shareTipCard = shareTipCard;
     this.trafficAlertCard = trafficAlertCard;
+    this.videoOption = videoOption;
   }
 
   @Override
@@ -105,6 +133,12 @@ public final class ActivityCreatePostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.audioOption;
+      LinearLayout audioOption = ViewBindings.findChildViewById(rootView, id);
+      if (audioOption == null) {
+        break missingId;
+      }
+
       id = R.id.backButton;
       TextView backButton = ViewBindings.findChildViewById(rootView, id);
       if (backButton == null) {
@@ -117,9 +151,33 @@ public final class ActivityCreatePostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mediaPreview;
+      ImageView mediaPreview = ViewBindings.findChildViewById(rootView, id);
+      if (mediaPreview == null) {
+        break missingId;
+      }
+
+      id = R.id.mediaPreviewContainer;
+      LinearLayout mediaPreviewContainer = ViewBindings.findChildViewById(rootView, id);
+      if (mediaPreviewContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.photoOption;
+      LinearLayout photoOption = ViewBindings.findChildViewById(rootView, id);
+      if (photoOption == null) {
+        break missingId;
+      }
+
       id = R.id.postButton;
       TextView postButton = ViewBindings.findChildViewById(rootView, id);
       if (postButton == null) {
+        break missingId;
+      }
+
+      id = R.id.removeMediaButton;
+      TextView removeMediaButton = ViewBindings.findChildViewById(rootView, id);
+      if (removeMediaButton == null) {
         break missingId;
       }
 
@@ -135,8 +193,15 @@ public final class ActivityCreatePostBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.videoOption;
+      LinearLayout videoOption = ViewBindings.findChildViewById(rootView, id);
+      if (videoOption == null) {
+        break missingId;
+      }
+
       return new ActivityCreatePostBinding((LinearLayout) rootView, askHelpCard, audienceDropdown,
-          audienceText, backButton, contentInput, postButton, shareTipCard, trafficAlertCard);
+          audienceText, audioOption, backButton, contentInput, mediaPreview, mediaPreviewContainer,
+          photoOption, postButton, removeMediaButton, shareTipCard, trafficAlertCard, videoOption);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

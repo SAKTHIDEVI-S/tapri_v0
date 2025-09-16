@@ -74,6 +74,7 @@
 
         <!-- Job Title -->
         <TextView
+            android:id="@+id/jobTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Grocery Delivery"
@@ -82,6 +83,76 @@
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_marginBottom="20dp"/>
+
+        <!-- Job Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Job Description -->
+            <TextView
+                android:id="@+id/jobDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick up groceries from BigBasket and deliver to customer"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_location"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="JP Nagar, Bangalore"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <!-- Contact Phone -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/contactPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+91 9876543210"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <!-- Job Summary/Earnings Section - Horizontal Layout -->
         <LinearLayout
@@ -111,6 +182,7 @@
                     android:layout_marginBottom="4dp"/>
 
                 <TextView
+                    android:id="@+id/hourlyRate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="120/hr"
@@ -140,6 +212,7 @@
                     android:layout_marginBottom="4dp"/>
 
                 <TextView
+                    android:id="@+id/payAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="600"

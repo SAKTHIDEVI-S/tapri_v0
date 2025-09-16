@@ -163,11 +163,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="wrap_content">
+            
+            <!-- Loading GIF Animation -->
+            <ImageView
+                android:id="@+id/loadingGifView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:src="@drawable/loading"/>
+            
+            <!-- Error Message -->
+            <LinearLayout
+                android:id="@+id/errorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+                
+                <TextView
+                    android:id="@+id/errorMessageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Failed to load profile"
+                    android:textSize="16sp"
+                    android:textColor="#666"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"/>
+                
+                <TextView
+                    android:id="@+id/retryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Retry"
+                    android:textSize="16sp"
+                    android:textColor="#E53935"
+                    android:textStyle="bold"
+                    android:background="@drawable/primary_button_background"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+            
+            <!-- Main Content -->
+            <LinearLayout
+                android:id="@+id/mainContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
 
             <!-- Profile Header -->
             <LinearLayout
@@ -214,142 +266,20 @@
                     android:textColor="#1A1A1A"
                     android:layout_marginBottom="8dp"/>
 
-                <!-- Rating in single line -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Rating "
-                        android:textSize="16sp"
-                        android:textColor="#666666"/>
-
-                    <TextView
-                        android:id="@+id/userRating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.0"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#1A1A1A"/>
-                </LinearLayout>
             </LinearLayout>
 
-            <!-- Today's Earnings Card -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/card_stroke_background"
-                android:padding="24dp"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Today's Earnings"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#1A1A1A"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:id="@+id/todayEarnings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="₹0"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:textColor="#1A1A1A"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Highest ₹2,500"
-                    android:textSize="16sp"
-                    android:textColor="#666666"
-                    android:layout_marginBottom="12dp"/>
-
-                <!-- Milestone Bar -->
-                <ProgressBar
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:progress="60"
-                    android:progressDrawable="@drawable/milestone_bar"
-                    android:indeterminate="false"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="480 above city average - nice work!"
-                    android:textSize="16sp"
-                    android:textColor="#4CAF50"/>
-            </LinearLayout>
-
-            <!-- Active Platforms Card -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/card_stroke_background"
-                android:padding="24dp"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Active Platforms"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#1A1A1A"
-                    android:layout_marginBottom="16dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <!-- Uber Logo -->
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/uber"
-                        android:scaleType="fitCenter"
-                        android:layout_marginEnd="24dp"/>
-
-                    <!-- Rapido Logo -->
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/rapido"
-                        android:scaleType="fitCenter"
-                        android:layout_marginEnd="24dp"/>
-
-                    <!-- Ola Driver Logo -->
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ola_driver"
-                        android:scaleType="fitCenter"/>
-
-                </LinearLayout>
-            </LinearLayout>
 
             <!-- My Posts Card -->
             <LinearLayout
+                android:id="@+id/myPostsButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/card_stroke_background"
                 android:padding="24dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -379,36 +309,6 @@
                         android:textColor="#E53935"/>
                 </LinearLayout>
 
-                <!-- Horizontal post images layout -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <!-- First post image -->
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="120dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/post1"
-                        android:scaleType="centerCrop"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/rounded_corner_background"
-                        android:contentDescription="Post image 1"/>
-
-                    <!-- Second post image -->
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="120dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/post2"
-                        android:scaleType="centerCrop"
-                        android:layout_marginStart="8dp"
-                        android:background="@drawable/rounded_corner_background"
-                        android:contentDescription="Post image 2"/>
-
-                </LinearLayout>
             </LinearLayout>
 
             <!-- Achievements Card -->
@@ -632,8 +532,9 @@
 
                 </LinearLayout>
             </LinearLayout>
-
-        </LinearLayout>
+            
+            </LinearLayout> <!-- Close mainContent -->
+        </FrameLayout> <!-- Close FrameLayout -->
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

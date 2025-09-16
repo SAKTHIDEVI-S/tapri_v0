@@ -7,11 +7,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.tapri.R;
@@ -21,46 +20,37 @@ import java.lang.String;
 
 public final class ActivityGroupChatBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final TextView backButton;
+  public final ImageView backButton;
 
   @NonNull
-  public final LinearLayout header;
+  public final RecyclerView chatRecyclerView;
+
+  @NonNull
+  public final TextView groupNameTextView;
 
   @NonNull
   public final EditText messageInput;
 
   @NonNull
-  public final LinearLayout messagesContainer;
-
-  @NonNull
-  public final ScrollView messagesScrollView;
-
-  @NonNull
-  public final ImageView moreOptionsButton;
-
-  @NonNull
   public final ImageView sendButton;
 
-  private ActivityGroupChatBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull TextView backButton, @NonNull LinearLayout header, @NonNull EditText messageInput,
-      @NonNull LinearLayout messagesContainer, @NonNull ScrollView messagesScrollView,
-      @NonNull ImageView moreOptionsButton, @NonNull ImageView sendButton) {
+  private ActivityGroupChatBinding(@NonNull LinearLayout rootView, @NonNull ImageView backButton,
+      @NonNull RecyclerView chatRecyclerView, @NonNull TextView groupNameTextView,
+      @NonNull EditText messageInput, @NonNull ImageView sendButton) {
     this.rootView = rootView;
     this.backButton = backButton;
-    this.header = header;
+    this.chatRecyclerView = chatRecyclerView;
+    this.groupNameTextView = groupNameTextView;
     this.messageInput = messageInput;
-    this.messagesContainer = messagesContainer;
-    this.messagesScrollView = messagesScrollView;
-    this.moreOptionsButton = moreOptionsButton;
     this.sendButton = sendButton;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -86,14 +76,20 @@ public final class ActivityGroupChatBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.backButton;
-      TextView backButton = ViewBindings.findChildViewById(rootView, id);
+      ImageView backButton = ViewBindings.findChildViewById(rootView, id);
       if (backButton == null) {
         break missingId;
       }
 
-      id = R.id.header;
-      LinearLayout header = ViewBindings.findChildViewById(rootView, id);
-      if (header == null) {
+      id = R.id.chatRecyclerView;
+      RecyclerView chatRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (chatRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.groupNameTextView;
+      TextView groupNameTextView = ViewBindings.findChildViewById(rootView, id);
+      if (groupNameTextView == null) {
         break missingId;
       }
 
@@ -103,32 +99,14 @@ public final class ActivityGroupChatBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.messagesContainer;
-      LinearLayout messagesContainer = ViewBindings.findChildViewById(rootView, id);
-      if (messagesContainer == null) {
-        break missingId;
-      }
-
-      id = R.id.messagesScrollView;
-      ScrollView messagesScrollView = ViewBindings.findChildViewById(rootView, id);
-      if (messagesScrollView == null) {
-        break missingId;
-      }
-
-      id = R.id.moreOptionsButton;
-      ImageView moreOptionsButton = ViewBindings.findChildViewById(rootView, id);
-      if (moreOptionsButton == null) {
-        break missingId;
-      }
-
       id = R.id.sendButton;
       ImageView sendButton = ViewBindings.findChildViewById(rootView, id);
       if (sendButton == null) {
         break missingId;
       }
 
-      return new ActivityGroupChatBinding((CoordinatorLayout) rootView, backButton, header,
-          messageInput, messagesContainer, messagesScrollView, moreOptionsButton, sendButton);
+      return new ActivityGroupChatBinding((LinearLayout) rootView, backButton, chatRecyclerView,
+          groupNameTextView, messageInput, sendButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

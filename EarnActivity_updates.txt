@@ -1,0 +1,161 @@
+﻿// Add these new properties after line 50 in EarnActivity.kt:
+private var claimedJobId: Long? = null
+private var currentClaimId: Long? = null
+private var timer: CountDownTimer? = null
+
+// Add these new imports at the top:
+import java.time.LocalDateTime
+import java.time.Duration
+import android.os.CountDownTimer
+import android.content.Intent
+
+// Replace the jobsAdapter initialization with:
+jobsAdapter = JobsAdapter(emptyList(), emptySet(), onDetails = { item ->
+    handleJobDetails(item)
+}, onClaim = { item ->
+    claimJob(item)
+})
+
+// Add these new methods at the end of the class:
+
+private fun handleJobDetails(item: JobItem) {
+    if (claimedJobId == item.id) {
+        // Go to submit proof screen
+        val intent = Intent(this, JobDetailsActivity::class.java)
+        intent.putExtra("claimId", currentClaimId)
+        intent.putExtra("jobId", item.id)
+        startActivity(intent)
+    } else {
+        // Go to unclaimed job details
+        val intent = Intent(this, UnclaimedJobDetailsActivity::class.java)
+        intent.putExtra("jobId", item.id)
+        startActivity(intent)
+    }
+}
+
+private fun claimJob(item: JobItem) {
+    CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val response = earnApi.claimJob(item.id)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    val claimResponse = response.body()
+                    claimedJobId = item.id
+                    currentClaimId = claimResponse?.claimId
+                    
+                    // Show bottom popup
+                    showBottomPopup(item, claimResponse?.dueAt)
+                    
+                    // Refresh job list to show claimed state
+                    fetchJobs()
+                    
+                    Toast.makeText(this@EarnActivity, "Claimed ${item.title}", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this@EarnActivity, "Failed to claim", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@EarnActivity, "Network error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
+
+private fun showBottomPopup(job: JobItem, dueAt: String?) {
+    ongoingJobTitle.text = job.title
+    bottomPopupCard.visibility = View.VISIBLE
+    
+    dueAt?.let { startCountdown(it) }
+}
+
+private fun startCountdown(dueAt: String) {
+    try {
+        val dueTime = LocalDateTime.parse(dueAt)
+        val now = LocalDateTime.now()
+        val duration = Duration.between(now, dueTime)
+        
+        if (duration.isNegative) {
+            ongoingJobTime.text = "Expired"
+            return
+        }
+        
+        timer?.cancel()
+        timer = object : CountDownTimer(duration.toMillis(), 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                val hours = millisUntilFinished / (1000 * 60 * 60)
+                val minutes = (millisUntilFinished % (1000 * 60 * 60)) / (1000 * 60)
+                ongoingJobTime.text = "${hours}h ${minutes}m left"
+            }
+            
+            override fun onFinish() {
+                ongoingJobTime.text = "Time's up!"
+                bottomPopupCard.visibility = View.GONE
+            }
+        }.start()
+    } catch (e: Exception) {
+        ongoingJobTime.text = "Time unknown"
+    }
+}
+
+// Update the existing fetchJobs method to this:
+private fun fetchJobs() {
+    CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val jobsResponse = earnApi.listJobs()
+            val ongoingResponse = earnApi.getOngoingClaim()
+            
+            withContext(Dispatchers.Main) {
+                if (jobsResponse.isSuccessful) {
+                    jobs = jobsResponse.body() ?: emptyList()
+                    
+                    val claimedJobs = mutableSetOf<Long>()
+                    if (ongoingResponse.isSuccessful) {
+                        val ongoing = ongoingResponse.body()
+                        ongoing?.job?.let { 
+                            claimedJobs.add(it.id)
+                            claimedJobId = it.id
+                            currentClaimId = ongoing.id
+                            showBottomPopup(it, ongoing.dueAt)
+                        }
+                    }
+                    
+                    applyTabFilter("now", claimedJobs)
+                } else {
+                    Toast.makeText(this@EarnActivity, "Failed to fetch jobs", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@EarnActivity, "Network error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
+
+// Update the existing applyTabFilter method to include claimedJobs parameter:
+private fun applyTabFilter(tab: String, claimedJobs: Set<Long> = emptySet()) {
+    val today = LocalDate.now()
+    val items = jobs.filter { job ->
+        val date = parseStartsAt(job.startsAt) ?: today
+        when (tab) {
+            "now" -> date.isEqual(today)
+            "tomorrow" -> date.isEqual(today.plusDays(1))
+            "next_week" -> date.isAfter(today.plusDays(1))
+            else -> true
+        }
+    }
+    Log.d("EarnActivity", "Tab=$tab items=${items.size}")
+    jobsAdapter.update(items, claimedJobs)
+    if (items.isEmpty()) Toast.makeText(this, "No jobs for selected tab", Toast.LENGTH_SHORT).show()
+}
+
+// Update the viewJobButton click listener to:
+viewJobButton.setOnClickListener {
+    if (claimedJobId != null && currentClaimId != null) {
+        val intent = Intent(this, JobDetailsActivity::class.java)
+        intent.putExtra("claimId", currentClaimId)
+        intent.putExtra("jobId", claimedJobId)
+        startActivity(intent)
+    }
+}

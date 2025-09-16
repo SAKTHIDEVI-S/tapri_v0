@@ -16,11 +16,9 @@ class GroupAdapter(
 ) : RecyclerView.Adapter<GroupAdapter.GroupViewHolder>() {
     
     class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val groupAvatar: ImageView = view.findViewById(R.id.groupAvatar)
+        val groupImage: ImageView = view.findViewById(R.id.groupAvatar)
         val groupName: TextView = view.findViewById(R.id.groupName)
-        val groupDescription: TextView = view.findViewById(R.id.groupDescription)
-        val followerCount: TextView = view.findViewById(R.id.followerCount)
-        val joinButton: Button = view.findViewById(R.id.joinButton)
+        val memberCount: TextView = view.findViewById(R.id.memberCount)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroupViewHolder {
@@ -30,20 +28,11 @@ class GroupAdapter(
 
     override fun onBindViewHolder(holder: GroupViewHolder, position: Int) {
         val group = groups[position]
-        holder.groupAvatar.setImageResource(group.groupAvatar)
+        holder.groupImage.setImageResource(group.groupAvatar)
         holder.groupName.text = group.name
-        holder.groupDescription.text = group.description
-        holder.followerCount.text = group.followerCount
+        holder.memberCount.text = group.followerCount
         
-        if (group.isJoined) {
-            holder.joinButton.text = "Joined"
-            holder.joinButton.isEnabled = false
-        } else {
-            holder.joinButton.text = "Join"
-            holder.joinButton.isEnabled = true
-        }
-        
-        holder.joinButton.setOnClickListener {
+        holder.itemView.setOnClickListener {
             onJoinClick(group)
         }
     }

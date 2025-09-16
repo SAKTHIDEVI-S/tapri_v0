@@ -1,0 +1,77 @@
+﻿// Updates for JobDetailsActivity.kt
+
+// Add these imports at the top:
+import com.tapri.network.ApiClient
+import com.tapri.network.EarnApi
+import com.tapri.network.SubmitProofRequest
+import com.tapri.utils.SessionManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+// Add these properties after the existing ones:
+private lateinit var sessionManager: SessionManager
+private lateinit var earnApi: EarnApi
+
+// Update onCreate method to initialize networking:
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_job_details)
+
+    initializeViews()
+    setupClickListeners()
+    
+    // Initialize networking
+    sessionManager = SessionManager(this)
+    earnApi = ApiClient.earnRetrofit(sessionManager).create(EarnApi::class.java)
+}
+
+// Update setupClickListeners method:
+private fun setupClickListeners() {
+    backButton.setOnClickListener {
+        finish()
+    }
+
+    callButton.setOnClickListener {
+        // Get contact phone from job details
+        Toast.makeText(this, "Calling customer...", Toast.LENGTH_SHORT).show()
+    }
+
+    submitProofsButton.setOnClickListener {
+        submitProof()
+    }
+}
+
+// Add this new method:
+private fun submitProof() {
+    val claimId = intent.getLongExtra("claimId", -1)
+    if (claimId == -1L) {
+        Toast.makeText(this, "Invalid claim ID", Toast.LENGTH_SHORT).show()
+        return
+    }
+    
+    CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val request = SubmitProofRequest(
+                proofUrl = "proof_image_url", // In real app, get from camera/gallery
+                notes = "Job completed successfully"
+            )
+            val response = earnApi.submitProof(claimId, request)
+            
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    Toast.makeText(this@JobDetailsActivity, "Proof submitted successfully!", Toast.LENGTH_SHORT).show()
+                    setResult(RESULT_OK)
+                    finish()
+                } else {
+                    Toast.makeText(this@JobDetailsActivity, "Failed to submit proof", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@JobDetailsActivity, "Network error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}

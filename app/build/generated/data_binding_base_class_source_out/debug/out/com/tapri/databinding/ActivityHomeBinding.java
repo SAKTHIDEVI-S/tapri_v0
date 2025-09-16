@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.tapri.R;
@@ -32,6 +33,12 @@ public final class ActivityHomeBinding implements ViewBinding {
 
   @NonNull
   public final CardView earningsCard;
+
+  @NonNull
+  public final LinearLayout errorContainer;
+
+  @NonNull
+  public final TextView errorMessageView;
 
   @NonNull
   public final TextView findJobsButton;
@@ -109,6 +116,9 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final LinearLayout linearLayout2;
 
   @NonNull
+  public final ImageView loadingGifView;
+
+  @NonNull
   public final LinearLayout missedOpportunitiesSection;
 
   @NonNull
@@ -124,7 +134,13 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final ImageView profileIcon;
 
   @NonNull
+  public final TextView retryButton;
+
+  @NonNull
   public final TextView shortJobsFilter;
+
+  @NonNull
+  public final SwipeRefreshLayout swipeRefreshLayout;
 
   @NonNull
   public final ImageView tapriLogo;
@@ -143,6 +159,7 @@ public final class ActivityHomeBinding implements ViewBinding {
 
   private ActivityHomeBinding(@NonNull CoordinatorLayout rootView, @NonNull ImageView earnButton,
       @NonNull LinearLayout earnNav, @NonNull CardView earningsCard,
+      @NonNull LinearLayout errorContainer, @NonNull TextView errorMessageView,
       @NonNull TextView findJobsButton, @NonNull TextView foodClaimButton1,
       @NonNull TextView foodClaimButton2, @NonNull LinearLayout foodJobCard1,
       @NonNull LinearLayout foodJobCard2, @NonNull TextView foodViewDetails1,
@@ -155,16 +172,19 @@ public final class ActivityHomeBinding implements ViewBinding {
       @NonNull TextView groceryViewDetails3, @NonNull TextView highPayFilter,
       @NonNull LinearLayout homeNav, @NonNull LinearLayout hotspotSection,
       @NonNull LinearLayout infoNav, @NonNull LinearLayout jobListingsSection,
-      @NonNull LinearLayout linearLayout2, @NonNull LinearLayout missedOpportunitiesSection,
-      @NonNull TextView nearbyFilter, @NonNull ImageView notificationIcon,
-      @NonNull RecyclerView postsRecyclerView, @NonNull ImageView profileIcon,
-      @NonNull TextView shortJobsFilter, @NonNull ImageView tapriLogo,
-      @NonNull LinearLayout tapriNav, @NonNull LinearLayout tipsNav,
+      @NonNull LinearLayout linearLayout2, @NonNull ImageView loadingGifView,
+      @NonNull LinearLayout missedOpportunitiesSection, @NonNull TextView nearbyFilter,
+      @NonNull ImageView notificationIcon, @NonNull RecyclerView postsRecyclerView,
+      @NonNull ImageView profileIcon, @NonNull TextView retryButton,
+      @NonNull TextView shortJobsFilter, @NonNull SwipeRefreshLayout swipeRefreshLayout,
+      @NonNull ImageView tapriLogo, @NonNull LinearLayout tapriNav, @NonNull LinearLayout tipsNav,
       @NonNull TextView todayEarningsText, @NonNull LinearLayout topBar) {
     this.rootView = rootView;
     this.earnButton = earnButton;
     this.earnNav = earnNav;
     this.earningsCard = earningsCard;
+    this.errorContainer = errorContainer;
+    this.errorMessageView = errorMessageView;
     this.findJobsButton = findJobsButton;
     this.foodClaimButton1 = foodClaimButton1;
     this.foodClaimButton2 = foodClaimButton2;
@@ -190,12 +210,15 @@ public final class ActivityHomeBinding implements ViewBinding {
     this.infoNav = infoNav;
     this.jobListingsSection = jobListingsSection;
     this.linearLayout2 = linearLayout2;
+    this.loadingGifView = loadingGifView;
     this.missedOpportunitiesSection = missedOpportunitiesSection;
     this.nearbyFilter = nearbyFilter;
     this.notificationIcon = notificationIcon;
     this.postsRecyclerView = postsRecyclerView;
     this.profileIcon = profileIcon;
+    this.retryButton = retryButton;
     this.shortJobsFilter = shortJobsFilter;
+    this.swipeRefreshLayout = swipeRefreshLayout;
     this.tapriLogo = tapriLogo;
     this.tapriNav = tapriNav;
     this.tipsNav = tipsNav;
@@ -245,6 +268,18 @@ public final class ActivityHomeBinding implements ViewBinding {
       id = R.id.earningsCard;
       CardView earningsCard = ViewBindings.findChildViewById(rootView, id);
       if (earningsCard == null) {
+        break missingId;
+      }
+
+      id = R.id.errorContainer;
+      LinearLayout errorContainer = ViewBindings.findChildViewById(rootView, id);
+      if (errorContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.errorMessageView;
+      TextView errorMessageView = ViewBindings.findChildViewById(rootView, id);
+      if (errorMessageView == null) {
         break missingId;
       }
 
@@ -398,6 +433,12 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.loadingGifView;
+      ImageView loadingGifView = ViewBindings.findChildViewById(rootView, id);
+      if (loadingGifView == null) {
+        break missingId;
+      }
+
       id = R.id.missedOpportunitiesSection;
       LinearLayout missedOpportunitiesSection = ViewBindings.findChildViewById(rootView, id);
       if (missedOpportunitiesSection == null) {
@@ -428,9 +469,21 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.retryButton;
+      TextView retryButton = ViewBindings.findChildViewById(rootView, id);
+      if (retryButton == null) {
+        break missingId;
+      }
+
       id = R.id.shortJobsFilter;
       TextView shortJobsFilter = ViewBindings.findChildViewById(rootView, id);
       if (shortJobsFilter == null) {
+        break missingId;
+      }
+
+      id = R.id.swipeRefreshLayout;
+      SwipeRefreshLayout swipeRefreshLayout = ViewBindings.findChildViewById(rootView, id);
+      if (swipeRefreshLayout == null) {
         break missingId;
       }
 
@@ -465,14 +518,15 @@ public final class ActivityHomeBinding implements ViewBinding {
       }
 
       return new ActivityHomeBinding((CoordinatorLayout) rootView, earnButton, earnNav,
-          earningsCard, findJobsButton, foodClaimButton1, foodClaimButton2, foodJobCard1,
-          foodJobCard2, foodViewDetails1, foodViewDetails2, freeNowBar, freeNowSwitch, giftBox,
-          groceryClaimButton1, groceryClaimButton2, groceryClaimButton3, groceryJobCard1,
-          groceryJobCard2, groceryJobCard3, groceryViewDetails1, groceryViewDetails2,
-          groceryViewDetails3, highPayFilter, homeNav, hotspotSection, infoNav, jobListingsSection,
-          linearLayout2, missedOpportunitiesSection, nearbyFilter, notificationIcon,
-          postsRecyclerView, profileIcon, shortJobsFilter, tapriLogo, tapriNav, tipsNav,
-          todayEarningsText, topBar);
+          earningsCard, errorContainer, errorMessageView, findJobsButton, foodClaimButton1,
+          foodClaimButton2, foodJobCard1, foodJobCard2, foodViewDetails1, foodViewDetails2,
+          freeNowBar, freeNowSwitch, giftBox, groceryClaimButton1, groceryClaimButton2,
+          groceryClaimButton3, groceryJobCard1, groceryJobCard2, groceryJobCard3,
+          groceryViewDetails1, groceryViewDetails2, groceryViewDetails3, highPayFilter, homeNav,
+          hotspotSection, infoNav, jobListingsSection, linearLayout2, loadingGifView,
+          missedOpportunitiesSection, nearbyFilter, notificationIcon, postsRecyclerView,
+          profileIcon, retryButton, shortJobsFilter, swipeRefreshLayout, tapriLogo, tapriNav,
+          tipsNav, todayEarningsText, topBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

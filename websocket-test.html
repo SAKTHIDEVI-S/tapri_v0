@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapri WebSocket Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .connected { background-color: #d4edda; color: #155724; }
+        .disconnected { background-color: #f8d7da; color: #721c24; }
+        .connecting { background-color: #fff3cd; color: #856404; }
+        
+        #messages {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .message.own { background-color: #e3f2fd; }
+        .message.other { background-color: #f1f8e9; }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #c82333; }
+        button:disabled { background-color: #6c757d; cursor: not-allowed; }
+        
+        .controls {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .controls label {
+            display: block;
+            margin: 5px 0;
+        }
+        .controls input, .controls select {
+            margin-left: 10px;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Tapri WebSocket Test</h1>
+        
+        <div id="status" class="status disconnected">Disconnected</div>
+        
+        <div class="controls">
+            <label>
+                Server URL: 
+                <input type="text" id="serverUrl" value="http://localhost:8080" style="width: 200px;">
+            </label>
+            <label>
+                User ID: 
+                <input type="number" id="userId" value="1" min="1" max="6">
+            </label>
+            <label>
+                Group ID: 
+                <input type="number" id="groupId" value="1" min="1" max="2">
+            </label>
+            <button onclick="connect()">Connect</button>
+            <button onclick="disconnect()">Disconnect</button>
+        </div>
+        
+        <div id="messages"></div>
+        
+        <div class="input-group">
+            <input type="text" id="messageInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()" id="sendBtn" disabled>Send</button>
+        </div>
+        
+        <div class="input-group">
+            <button onclick="sendTyping(true)">Start Typing</button>
+            <button onclick="sendTyping(false)">Stop Typing</button>
+            <button onclick="clearMessages()">Clear Messages</button>
+        </div>
+        
+        <div style="margin-top: 20px; padding: 15px; background-color: #e9ecef; border-radius: 4px;">
+            <h3>📋 Test Users (User ID → Name)</h3>
+            <ul>
+                <li><strong>1</strong> - Ramesh Kumar (+919876543210)</li>
+                <li><strong>2</strong> - Suresh Singh (+919876543211)</li>
+                <li><strong>3</strong> - Priya Sharma (+919876543212)</li>
+                <li><strong>4</strong> - Amit Patel (+919876543213)</li>
+                <li><strong>5</strong> - Deepika Reddy (+919876543214)</li>
+                <li><strong>6</strong> - Vikram Joshi (+919876543215)</li>
+            </ul>
+            
+            <h3>👥 Test Groups (Group ID → Name)</h3>
+            <ul>
+                <li><strong>1</strong> - Delhi Drivers (Members: 1,2,3,5)</li>
+                <li><strong>2</strong> - Mumbai Rides (Members: 4,6,1)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    
+    <script>
+        let stompClient = null;
+        let currentUserId = 1;
+        let currentGroupId = 1;
+        
+        function updateStatus(message, className) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${className}`;
+        }
+        
+        function connect() {
+            const serverUrl = document.getElementById('serverUrl').value;
+            const userId = parseInt(document.getElementById('userId').value);
+            const groupId = parseInt(document.getElementById('groupId').value);
+            
+            currentUserId = userId;
+            currentGroupId = groupId;
+            
+            updateStatus('Connecting...', 'connecting');
+            
+            const socket = new SockJS(serverUrl + '/ws/chat');
+            stompClient = Stomp.over(socket);
+            
+            stompClient.connect({}, function(frame) {
+                updateStatus('Connected to ' + serverUrl, 'connected');
+                document.getElementById('sendBtn').disabled = false;
+                
+                // Subscribe to group messages
+                stompClient.subscribe('/topic/groups/' + groupId, function(message) {
+                    const messageData = JSON.parse(message.body);
+                    addMessage(messageData, false);
+                });
+                
+                // Subscribe to typing indicators
+                stompClient.subscribe('/topic/groups/' + groupId + '/typing', function(typing) {
+                    const typingData = JSON.parse(typing.body);
+                    showTypingIndicator(typingData);
+                });
+                
+                // Subscribe to message updates
+                stompClient.subscribe('/topic/groups/' + groupId + '/updates', function(update) {
+                    const updateData = JSON.parse(update.body);
+                    handleMessageUpdate(updateData);
+                });
+                
+            }, function(error) {
+                updateStatus('Connection failed: ' + error, 'disconnected');
+                document.getElementById('sendBtn').disabled = true;
+            });
+        }
+        
+        function disconnect() {
+            if (stompClient !== null) {
+                stompClient.disconnect();
+                stompClient = null;
+            }
+            updateStatus('Disconnected', 'disconnected');
+            document.getElementById('sendBtn').disabled = true;
+        }
+        
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (message && stompClient) {
+                stompClient.send("/app/groups/" + currentGroupId + "/send", {}, JSON.stringify({
+                    content: message,
+                    mediaUrl: null,
+                    mediaType: null
+                }));
+                
+                // Add message to UI immediately
+                const messageData = {
+                    user: { name: 'You (ID: ' + currentUserId + ')' },
+                    content: message,
+                    createdAt: new Date().toISOString()
+                };
+                addMessage(messageData, true);
+                
+                messageInput.value = '';
+            }
+        }
+        
+        function sendTyping(isTyping) {
+            if (stompClient) {
+                stompClient.send("/app/groups/" + currentGroupId + "/typing", {}, JSON.stringify({
+                    isTyping: isTyping
+                }));
+            }
+        }
+        
+        function addMessage(messageData, isOwn) {
+            const messagesDiv = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isOwn ? 'own' : 'other'}`;
+            
+            const timestamp = new Date(messageData.createdAt).toLocaleTimeString();
+            messageDiv.innerHTML = `
+                <strong>${messageData.user.name}</strong> 
+                <span style="color: #666; font-size: 0.8em;">(${timestamp})</span><br>
+                ${messageData.content}
+            `;
+            
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        function showTypingIndicator(typingData) {
+            if (typingData.userId === currentUserId) return; // Don't show own typing
+            
+            const messagesDiv = document.getElementById('messages');
+            let typingDiv = document.getElementById('typing-indicator');
+            
+            if (typingData.isTyping) {
+                if (!typingDiv) {
+                    typingDiv = document.createElement('div');
+                    typingDiv.id = 'typing-indicator';
+                    typingDiv.style.color = '#666';
+                    typingDiv.style.fontStyle = 'italic';
+                    messagesDiv.appendChild(typingDiv);
+                }
+                typingDiv.textContent = typingData.userName + ' is typing...';
+            } else {
+                if (typingDiv) {
+                    typingDiv.remove();
+                }
+            }
+        }
+        
+        function handleMessageUpdate(updateData) {
+            // Handle message edits, deletions, etc.
+            console.log('Message update:', updateData);
+        }
+        
+        function clearMessages() {
+            document.getElementById('messages').innerHTML = '';
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        // Auto-connect on page load
+        window.onload = function() {
+            // Don't auto-connect, let user choose
+        };
+    </script>
+</body>
+</html>

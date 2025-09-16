@@ -25,11 +25,37 @@ public final class ActivityUnclaimedJobDetailsBinding implements ViewBinding {
   @NonNull
   public final TextView claimButton;
 
+  @NonNull
+  public final TextView contactPhone;
+
+  @NonNull
+  public final TextView hourlyRate;
+
+  @NonNull
+  public final TextView jobDescription;
+
+  @NonNull
+  public final TextView jobTitle;
+
+  @NonNull
+  public final TextView location;
+
+  @NonNull
+  public final TextView payAmount;
+
   private ActivityUnclaimedJobDetailsBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView backButton, @NonNull TextView claimButton) {
+      @NonNull TextView backButton, @NonNull TextView claimButton, @NonNull TextView contactPhone,
+      @NonNull TextView hourlyRate, @NonNull TextView jobDescription, @NonNull TextView jobTitle,
+      @NonNull TextView location, @NonNull TextView payAmount) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.claimButton = claimButton;
+    this.contactPhone = contactPhone;
+    this.hourlyRate = hourlyRate;
+    this.jobDescription = jobDescription;
+    this.jobTitle = jobTitle;
+    this.location = location;
+    this.payAmount = payAmount;
   }
 
   @Override
@@ -71,8 +97,44 @@ public final class ActivityUnclaimedJobDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.contactPhone;
+      TextView contactPhone = ViewBindings.findChildViewById(rootView, id);
+      if (contactPhone == null) {
+        break missingId;
+      }
+
+      id = R.id.hourlyRate;
+      TextView hourlyRate = ViewBindings.findChildViewById(rootView, id);
+      if (hourlyRate == null) {
+        break missingId;
+      }
+
+      id = R.id.jobDescription;
+      TextView jobDescription = ViewBindings.findChildViewById(rootView, id);
+      if (jobDescription == null) {
+        break missingId;
+      }
+
+      id = R.id.jobTitle;
+      TextView jobTitle = ViewBindings.findChildViewById(rootView, id);
+      if (jobTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.location;
+      TextView location = ViewBindings.findChildViewById(rootView, id);
+      if (location == null) {
+        break missingId;
+      }
+
+      id = R.id.payAmount;
+      TextView payAmount = ViewBindings.findChildViewById(rootView, id);
+      if (payAmount == null) {
+        break missingId;
+      }
+
       return new ActivityUnclaimedJobDetailsBinding((LinearLayout) rootView, backButton,
-          claimButton);
+          claimButton, contactPhone, hourlyRate, jobDescription, jobTitle, location, payAmount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Image URLs</title>
+</head>
+<body>
+    <h1>Testing Image URLs</h1>
+    
+    <h2>Direct Image URLs:</h2>
+    <p>Image 1: <a href="http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" target="_blank">http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg</a></p>
+    <img src="http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" alt="Image 1" style="max-width: 300px; height: auto;">
+    
+    <p>Image 2: <a href="http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg" target="_blank">http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg</a></p>
+    <img src="http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg" alt="Image 2" style="max-width: 300px; height: auto;">
+    
+    <p>Image 3: <a href="http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg" target="_blank">http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg</a></p>
+    <img src="http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg" alt="Image 3" style="max-width: 300px; height: auto;">
+    
+    <h2>Test with External Images (should work):</h2>
+    <p>External Image: <a href="https://picsum.photos/400/300?random=1" target="_blank">https://picsum.photos/400/300?random=1</a></p>
+    <img src="https://picsum.photos/400/300?random=1" alt="External Image" style="max-width: 300px; height: auto;">
+    
+    <script>
+        // Test image loading with JavaScript
+        function testImageLoad(url, name) {
+            const img = new Image();
+            img.onload = function() {
+                console.log('✅ ' + name + ' loaded successfully');
+                document.getElementById('status-' + name).innerHTML = '✅ Loaded successfully';
+            };
+            img.onerror = function() {
+                console.log('❌ ' + name + ' failed to load');
+                document.getElementById('status-' + name).innerHTML = '❌ Failed to load';
+            };
+            img.src = url;
+        }
+        
+        // Test all images
+        testImageLoad('http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg', 'img1');
+        testImageLoad('http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg', 'img2');
+        testImageLoad('http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg', 'img3');
+        testImageLoad('https://picsum.photos/400/300?random=1', 'external');
+    </script>
+    
+    <h2>Loading Status:</h2>
+    <p>Image 1: <span id="status-img1">Testing...</span></p>
+    <p>Image 2: <span id="status-img2">Testing...</span></p>
+    <p>Image 3: <span id="status-img3">Testing...</span></p>
+    <p>External: <span id="status-external">Testing...</span></p>
+</body>
+</html>

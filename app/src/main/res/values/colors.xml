@@ -11,4 +11,21 @@
     <color name="primary">#D50000</color>
     <color name="green">#4CAF50</color>
     <color name="gray">#757575</color>
+    <color name="grey">#757575</color>
+    
+    <!-- Enhanced Color Palette -->
+    <color name="primary_red">#E53935</color>
+    <color name="primary_red_light">#FFEBEE</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="accent_color">#FF5722</color>
+    <color name="background_light">#FAFAFA</color>
+    <color name="surface_color">#FFFFFF</color>
+    <color name="divider_color">#E0E0E0</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Additional color aliases for compatibility -->
+    <color name="text_primary">@color/primary_text</color>
+    <color name="text_secondary">@color/secondary_text</color>
+    <color name="dark_grey">@color/grey</color>
 </resources>

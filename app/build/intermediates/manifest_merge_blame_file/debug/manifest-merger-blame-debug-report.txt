@@ -9,506 +9,360 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\Tapri\app\src\main\AndroidManifest.xml:5:5-67
-11-->D:\Tapri\app\src\main\AndroidManifest.xml:5:22-64
-12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:5-79
-12-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:22-76
-13    <uses-permission android:name="android.permission.WAKE_LOCK" />
-13-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:24:5-68
-13-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:24:22-65
-14    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-14-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:25:5-79
-14-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:25:22-76
-15    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
-15-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:26:5-88
-15-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:26:22-85
-16    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
-16-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:27:5-82
-16-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:27:22-79
-17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-17-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:26:5-110
-17-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:26:22-107
+11-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission
+12-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:6:5-7:38
+13        android:name="android.permission.READ_EXTERNAL_STORAGE"
+13-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:6:22-77
+14        android:maxSdkVersion="32" />
+14-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:7:9-35
+15    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+15-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:8:5-76
+15-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:8:22-73
+16    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+16-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:9:5-75
+16-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:9:22-72
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:10:5-65
+17-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:10:22-62
 18
 19    <permission
-19-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\a16ebc643478ca68d88fc344cc90ccf4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+19-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\07bf151cf6162594a559cf1b4677f6c7\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 20        android:name="com.tapri.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-20-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\a16ebc643478ca68d88fc344cc90ccf4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+20-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\07bf151cf6162594a559cf1b4677f6c7\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 21        android:protectionLevel="signature" />
-21-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\a16ebc643478ca68d88fc344cc90ccf4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+21-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\07bf151cf6162594a559cf1b4677f6c7\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 22
 23    <uses-permission android:name="com.tapri.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-23-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\a16ebc643478ca68d88fc344cc90ccf4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-23-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\a16ebc643478ca68d88fc344cc90ccf4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+23-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\07bf151cf6162594a559cf1b4677f6c7\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\07bf151cf6162594a559cf1b4677f6c7\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 24
 25    <application
-25-->D:\Tapri\app\src\main\AndroidManifest.xml:7:5-100:19
+25-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:12:5-133:19
 26        android:allowBackup="true"
-26-->D:\Tapri\app\src\main\AndroidManifest.xml:8:9-35
+26-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:13:9-35
 27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-27-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\a16ebc643478ca68d88fc344cc90ccf4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+27-->[androidx.core:core:1.9.0] C:\Users\EB197TS\.gradle\caches\transforms-3\07bf151cf6162594a559cf1b4677f6c7\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 28        android:dataExtractionRules="@xml/data_extraction_rules"
-28-->D:\Tapri\app\src\main\AndroidManifest.xml:9:9-65
+28-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:14:9-65
 29        android:debuggable="true"
 30        android:extractNativeLibs="false"
 31        android:fullBackupContent="@xml/backup_rules"
-31-->D:\Tapri\app\src\main\AndroidManifest.xml:10:9-54
+31-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:15:9-54
 32        android:icon="@drawable/tapri_logo"
-32-->D:\Tapri\app\src\main\AndroidManifest.xml:11:9-44
+32-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:16:9-44
 33        android:label="@string/app_name"
-33-->D:\Tapri\app\src\main\AndroidManifest.xml:12:9-41
+33-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:17:9-41
 34        android:networkSecurityConfig="@xml/network_security_config"
-34-->D:\Tapri\app\src\main\AndroidManifest.xml:16:9-69
+34-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:21:9-69
 35        android:roundIcon="@drawable/tapri_logo"
-35-->D:\Tapri\app\src\main\AndroidManifest.xml:13:9-49
+35-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:18:9-49
 36        android:supportsRtl="true"
-36-->D:\Tapri\app\src\main\AndroidManifest.xml:14:9-35
-37        android:theme="@style/Theme.Tapri" >
-37-->D:\Tapri\app\src\main\AndroidManifest.xml:15:9-43
-38        <activity
-38-->D:\Tapri\app\src\main\AndroidManifest.xml:18:9-26:20
-39            android:name="com.tapri.ui.SplashActivity"
-39-->D:\Tapri\app\src\main\AndroidManifest.xml:19:13-46
-40            android:exported="true"
-40-->D:\Tapri\app\src\main\AndroidManifest.xml:20:13-36
-41            android:theme="@style/Theme.Tapri.NoActionBar" >
-41-->D:\Tapri\app\src\main\AndroidManifest.xml:21:13-59
-42            <intent-filter>
-42-->D:\Tapri\app\src\main\AndroidManifest.xml:22:13-25:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->D:\Tapri\app\src\main\AndroidManifest.xml:23:17-69
-43-->D:\Tapri\app\src\main\AndroidManifest.xml:23:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->D:\Tapri\app\src\main\AndroidManifest.xml:24:17-77
-45-->D:\Tapri\app\src\main\AndroidManifest.xml:24:27-74
-46            </intent-filter>
-47        </activity>
-48        <activity
-48-->D:\Tapri\app\src\main\AndroidManifest.xml:27:9-30:62
-49            android:name="com.tapri.ui.OnboardingActivity"
-49-->D:\Tapri\app\src\main\AndroidManifest.xml:28:13-50
-50            android:exported="false"
-50-->D:\Tapri\app\src\main\AndroidManifest.xml:29:13-37
-51            android:theme="@style/Theme.Tapri.NoActionBar" />
-51-->D:\Tapri\app\src\main\AndroidManifest.xml:30:13-59
-52        <activity
-52-->D:\Tapri\app\src\main\AndroidManifest.xml:31:9-34:62
-53            android:name="com.tapri.ui.LoginActivity"
-53-->D:\Tapri\app\src\main\AndroidManifest.xml:32:13-45
-54            android:exported="false"
-54-->D:\Tapri\app\src\main\AndroidManifest.xml:33:13-37
-55            android:theme="@style/Theme.Tapri.NoActionBar" />
-55-->D:\Tapri\app\src\main\AndroidManifest.xml:34:13-59
-56        <activity
-56-->D:\Tapri\app\src\main\AndroidManifest.xml:35:9-38:62
-57            android:name="com.tapri.ui.SignUpActivity"
-57-->D:\Tapri\app\src\main\AndroidManifest.xml:36:13-46
-58            android:exported="false"
-58-->D:\Tapri\app\src\main\AndroidManifest.xml:37:13-37
-59            android:theme="@style/Theme.Tapri.NoActionBar" />
-59-->D:\Tapri\app\src\main\AndroidManifest.xml:38:13-59
-60        <activity
-60-->D:\Tapri\app\src\main\AndroidManifest.xml:39:9-42:62
-61            android:name="com.tapri.ui.OtpActivity"
-61-->D:\Tapri\app\src\main\AndroidManifest.xml:40:13-43
-62            android:exported="false"
-62-->D:\Tapri\app\src\main\AndroidManifest.xml:41:13-37
-63            android:theme="@style/Theme.Tapri.NoActionBar" />
-63-->D:\Tapri\app\src\main\AndroidManifest.xml:42:13-59
-64        <activity
-64-->D:\Tapri\app\src\main\AndroidManifest.xml:43:9-46:62
-65            android:name="com.tapri.ui.HomeActivity"
-65-->D:\Tapri\app\src\main\AndroidManifest.xml:44:13-44
-66            android:exported="false"
-66-->D:\Tapri\app\src\main\AndroidManifest.xml:45:13-37
-67            android:theme="@style/Theme.Tapri.NoActionBar" />
-67-->D:\Tapri\app\src\main\AndroidManifest.xml:46:13-59
-68        <activity
-68-->D:\Tapri\app\src\main\AndroidManifest.xml:47:9-50:62
-69            android:name="com.tapri.ui.GroupsActivity"
-69-->D:\Tapri\app\src\main\AndroidManifest.xml:48:13-46
-70            android:exported="false"
-70-->D:\Tapri\app\src\main\AndroidManifest.xml:49:13-37
-71            android:theme="@style/Theme.Tapri.NoActionBar" />
-71-->D:\Tapri\app\src\main\AndroidManifest.xml:50:13-59
-72        <activity
-72-->D:\Tapri\app\src\main\AndroidManifest.xml:51:9-54:62
-73            android:name="com.tapri.ui.CreatePostActivity"
-73-->D:\Tapri\app\src\main\AndroidManifest.xml:52:13-50
-74            android:exported="false"
-74-->D:\Tapri\app\src\main\AndroidManifest.xml:53:13-37
-75            android:theme="@style/Theme.Tapri.NoActionBar" />
-75-->D:\Tapri\app\src\main\AndroidManifest.xml:54:13-59
-76        <activity
-76-->D:\Tapri\app\src\main\AndroidManifest.xml:55:9-58:62
-77            android:name="com.tapri.ui.ProfileActivity"
-77-->D:\Tapri\app\src\main\AndroidManifest.xml:56:13-47
-78            android:exported="false"
-78-->D:\Tapri\app\src\main\AndroidManifest.xml:57:13-37
-79            android:theme="@style/Theme.Tapri.NoActionBar" />
-79-->D:\Tapri\app\src\main\AndroidManifest.xml:58:13-59
-80        <activity
-80-->D:\Tapri\app\src\main\AndroidManifest.xml:59:9-62:62
-81            android:name="com.tapri.ui.TipsActivity"
-81-->D:\Tapri\app\src\main\AndroidManifest.xml:60:13-44
-82            android:exported="false"
-82-->D:\Tapri\app\src\main\AndroidManifest.xml:61:13-37
-83            android:theme="@style/Theme.Tapri.NoActionBar" />
-83-->D:\Tapri\app\src\main\AndroidManifest.xml:62:13-59
-84        <activity
-84-->D:\Tapri\app\src\main\AndroidManifest.xml:63:9-66:62
-85            android:name="com.tapri.ui.InfoActivity"
-85-->D:\Tapri\app\src\main\AndroidManifest.xml:64:13-44
-86            android:exported="false"
-86-->D:\Tapri\app\src\main\AndroidManifest.xml:65:13-37
-87            android:theme="@style/Theme.Tapri.NoActionBar" />
-87-->D:\Tapri\app\src\main\AndroidManifest.xml:66:13-59
-88        <activity
-88-->D:\Tapri\app\src\main\AndroidManifest.xml:67:9-70:62
-89            android:name="com.tapri.ui.EarnActivity"
-89-->D:\Tapri\app\src\main\AndroidManifest.xml:68:13-44
-90            android:exported="false"
-90-->D:\Tapri\app\src\main\AndroidManifest.xml:69:13-37
-91            android:theme="@style/Theme.Tapri.NoActionBar" />
-91-->D:\Tapri\app\src\main\AndroidManifest.xml:70:13-59
-92        <activity
-92-->D:\Tapri\app\src\main\AndroidManifest.xml:71:9-74:62
-93            android:name="com.tapri.ui.ClaimActivity"
-93-->D:\Tapri\app\src\main\AndroidManifest.xml:72:13-45
-94            android:exported="false"
-94-->D:\Tapri\app\src\main\AndroidManifest.xml:73:13-37
-95            android:theme="@style/Theme.Tapri.NoActionBar" />
-95-->D:\Tapri\app\src\main\AndroidManifest.xml:74:13-59
-96        <activity
-96-->D:\Tapri\app\src\main\AndroidManifest.xml:75:9-79:62
-97            android:name="com.tapri.ui.JobDetailsActivity"
-97-->D:\Tapri\app\src\main\AndroidManifest.xml:76:13-50
-98            android:exported="false"
-98-->D:\Tapri\app\src\main\AndroidManifest.xml:77:13-37
-99            android:launchMode="singleTop"
-99-->D:\Tapri\app\src\main\AndroidManifest.xml:78:13-43
+36-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:19:9-35
+37        android:testOnly="true"
+38        android:theme="@style/Theme.Tapri" >
+38-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:20:9-43
+39        <activity
+39-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:23:9-31:20
+40            android:name="com.tapri.ui.SplashActivity"
+40-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:24:13-46
+41            android:exported="true"
+41-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:25:13-36
+42            android:theme="@style/Theme.Tapri.NoActionBar" >
+42-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:26:13-59
+43            <intent-filter>
+43-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:27:13-30:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:28:17-69
+44-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:28:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:29:17-77
+46-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:29:27-74
+47            </intent-filter>
+48        </activity>
+49        <activity
+49-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:32:9-35:62
+50            android:name="com.tapri.ui.OnboardingActivity"
+50-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:33:13-50
+51            android:exported="false"
+51-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:34:13-37
+52            android:theme="@style/Theme.Tapri.NoActionBar" />
+52-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:35:13-59
+53        <activity
+53-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:36:9-39:62
+54            android:name="com.tapri.ui.LoginActivity"
+54-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:37:13-45
+55            android:exported="false"
+55-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:38:13-37
+56            android:theme="@style/Theme.Tapri.NoActionBar" />
+56-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:39:13-59
+57        <activity
+57-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:40:9-43:62
+58            android:name="com.tapri.ui.SignUpActivity"
+58-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:41:13-46
+59            android:exported="false"
+59-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:42:13-37
+60            android:theme="@style/Theme.Tapri.NoActionBar" />
+60-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:43:13-59
+61        <activity
+61-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:44:9-47:62
+62            android:name="com.tapri.ui.OtpActivity"
+62-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:45:13-43
+63            android:exported="false"
+63-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:46:13-37
+64            android:theme="@style/Theme.Tapri.NoActionBar" />
+64-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:47:13-59
+65        <activity
+65-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:48:9-51:62
+66            android:name="com.tapri.ui.HomeActivity"
+66-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:49:13-44
+67            android:exported="false"
+67-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:50:13-37
+68            android:theme="@style/Theme.Tapri.NoActionBar" />
+68-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:51:13-59
+69        <activity
+69-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:52:9-55:62
+70            android:name="com.tapri.ui.GroupsActivity"
+70-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:53:13-46
+71            android:exported="false"
+71-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:54:13-37
+72            android:theme="@style/Theme.Tapri.NoActionBar" />
+72-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:55:13-59
+73        <activity
+73-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:56:9-59:62
+74            android:name="com.tapri.ui.CreateGroupActivity"
+74-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:57:13-51
+75            android:exported="false"
+75-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:58:13-37
+76            android:theme="@style/Theme.Tapri.NoActionBar" />
+76-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:59:13-59
+77        <activity
+77-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:60:9-63:62
+78            android:name="com.tapri.ui.CreatePostActivity"
+78-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:61:13-50
+79            android:exported="false"
+79-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:62:13-37
+80            android:theme="@style/Theme.Tapri.NoActionBar" />
+80-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:63:13-59
+81        <activity
+81-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:64:9-67:62
+82            android:name="com.tapri.ui.ProfileActivity"
+82-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:65:13-47
+83            android:exported="false"
+83-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:66:13-37
+84            android:theme="@style/Theme.Tapri.NoActionBar" />
+84-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:67:13-59
+85        <activity
+85-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:68:9-71:62
+86            android:name="com.tapri.ui.MyPostsActivity"
+86-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:69:13-47
+87            android:exported="false"
+87-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:70:13-37
+88            android:theme="@style/Theme.Tapri.NoActionBar" />
+88-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:71:13-59
+89        <activity
+89-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:72:9-75:62
+90            android:name="com.tapri.ui.TipsActivity"
+90-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:73:13-44
+91            android:exported="false"
+91-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:74:13-37
+92            android:theme="@style/Theme.Tapri.NoActionBar" />
+92-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:75:13-59
+93        <activity
+93-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:76:9-79:62
+94            android:name="com.tapri.ui.InfoActivity"
+94-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:77:13-44
+95            android:exported="false"
+95-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:78:13-37
+96            android:theme="@style/Theme.Tapri.NoActionBar" />
+96-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:79:13-59
+97        <activity
+97-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:80:9-83:62
+98            android:name="com.tapri.ui.EarnActivity"
+98-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:81:13-44
+99            android:exported="false"
+99-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:82:13-37
 100            android:theme="@style/Theme.Tapri.NoActionBar" />
-100-->D:\Tapri\app\src\main\AndroidManifest.xml:79:13-59
+100-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:83:13-59
 101        <activity
-101-->D:\Tapri\app\src\main\AndroidManifest.xml:80:9-83:62
-102            android:name="com.tapri.ui.NotificationsActivity"
-102-->D:\Tapri\app\src\main\AndroidManifest.xml:81:13-53
+101-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:84:9-87:62
+102            android:name="com.tapri.ui.ClaimActivity"
+102-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:85:13-45
 103            android:exported="false"
-103-->D:\Tapri\app\src\main\AndroidManifest.xml:82:13-37
+103-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:86:13-37
 104            android:theme="@style/Theme.Tapri.NoActionBar" />
-104-->D:\Tapri\app\src\main\AndroidManifest.xml:83:13-59
+104-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:87:13-59
 105        <activity
-105-->D:\Tapri\app\src\main\AndroidManifest.xml:84:9-87:62
-106            android:name="com.tapri.ui.UnclaimedJobDetailsActivity"
-106-->D:\Tapri\app\src\main\AndroidManifest.xml:85:13-59
+105-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:88:9-92:62
+106            android:name="com.tapri.ui.JobDetailsActivity"
+106-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:89:13-50
 107            android:exported="false"
-107-->D:\Tapri\app\src\main\AndroidManifest.xml:86:13-37
-108            android:theme="@style/Theme.Tapri.NoActionBar" />
-108-->D:\Tapri\app\src\main\AndroidManifest.xml:87:13-59
-109        <activity
-109-->D:\Tapri\app\src\main\AndroidManifest.xml:88:9-91:62
-110            android:name="com.tapri.ui.PostJobActivity"
-110-->D:\Tapri\app\src\main\AndroidManifest.xml:89:13-47
-111            android:exported="false"
-111-->D:\Tapri\app\src\main\AndroidManifest.xml:90:13-37
-112            android:theme="@style/Theme.Tapri.NoActionBar" />
-112-->D:\Tapri\app\src\main\AndroidManifest.xml:91:13-59
-113        <activity
-113-->D:\Tapri\app\src\main\AndroidManifest.xml:92:9-95:62
-114            android:name="com.tapri.ui.TipDetailsActivity"
-114-->D:\Tapri\app\src\main\AndroidManifest.xml:93:13-50
-115            android:exported="false"
-115-->D:\Tapri\app\src\main\AndroidManifest.xml:94:13-37
-116            android:theme="@style/Theme.Tapri.NoActionBar" />
-116-->D:\Tapri\app\src\main\AndroidManifest.xml:95:13-59
-117        <activity
-117-->D:\Tapri\app\src\main\AndroidManifest.xml:96:9-99:62
-118            android:name="com.tapri.ui.GroupChatActivity"
-118-->D:\Tapri\app\src\main\AndroidManifest.xml:97:13-49
-119            android:exported="false"
-119-->D:\Tapri\app\src\main\AndroidManifest.xml:98:13-37
-120            android:theme="@style/Theme.Tapri.NoActionBar" />
-120-->D:\Tapri\app\src\main\AndroidManifest.xml:99:13-59
-121
-122        <service
-122-->[com.google.firebase:firebase-analytics-ktx:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\01ab7fd28f0f40f475db84b17d2fe448\transformed\jetified-firebase-analytics-ktx-21.5.0\AndroidManifest.xml:8:9-14:19
-123            android:name="com.google.firebase.components.ComponentDiscoveryService"
-123-->[com.google.firebase:firebase-analytics-ktx:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\01ab7fd28f0f40f475db84b17d2fe448\transformed\jetified-firebase-analytics-ktx-21.5.0\AndroidManifest.xml:9:13-84
-124            android:directBootAware="true"
-124-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
-125            android:exported="false" >
-125-->[com.google.firebase:firebase-analytics-ktx:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\01ab7fd28f0f40f475db84b17d2fe448\transformed\jetified-firebase-analytics-ktx-21.5.0\AndroidManifest.xml:10:13-37
-126            <meta-data
-126-->[com.google.firebase:firebase-analytics-ktx:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\01ab7fd28f0f40f475db84b17d2fe448\transformed\jetified-firebase-analytics-ktx-21.5.0\AndroidManifest.xml:11:13-13:85
-127                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsLegacyRegistrar"
-127-->[com.google.firebase:firebase-analytics-ktx:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\01ab7fd28f0f40f475db84b17d2fe448\transformed\jetified-firebase-analytics-ktx-21.5.0\AndroidManifest.xml:12:17-129
-128                android:value="com.google.firebase.components.ComponentRegistrar" />
-128-->[com.google.firebase:firebase-analytics-ktx:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\01ab7fd28f0f40f475db84b17d2fe448\transformed\jetified-firebase-analytics-ktx-21.5.0\AndroidManifest.xml:13:17-82
-129            <meta-data
-129-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\f62befa6ab66e754f2243f019248def5\transformed\jetified-firebase-auth-ktx-22.3.0\AndroidManifest.xml:11:13-13:85
-130                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
-130-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\f62befa6ab66e754f2243f019248def5\transformed\jetified-firebase-auth-ktx-22.3.0\AndroidManifest.xml:12:17-119
-131                android:value="com.google.firebase.components.ComponentRegistrar" />
-131-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\f62befa6ab66e754f2243f019248def5\transformed\jetified-firebase-auth-ktx-22.3.0\AndroidManifest.xml:13:17-82
-132            <meta-data
-132-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:69:13-71:85
-133                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-133-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:70:17-109
-134                android:value="com.google.firebase.components.ComponentRegistrar" />
-134-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:71:17-82
-135            <meta-data
-135-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:37:13-39:85
-136                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-136-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:38:17-139
-137                android:value="com.google.firebase.components.ComponentRegistrar" />
-137-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:39:17-82
-138            <meta-data
-138-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\5b90323e009a507a3fed531718e5bea6\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
-139                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
-139-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\5b90323e009a507a3fed531718e5bea6\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
-140                android:value="com.google.firebase.components.ComponentRegistrar" />
-140-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\5b90323e009a507a3fed531718e5bea6\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
-141            <meta-data
-141-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\5b90323e009a507a3fed531718e5bea6\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
-142                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-142-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\5b90323e009a507a3fed531718e5bea6\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
-143                android:value="com.google.firebase.components.ComponentRegistrar" />
-143-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\5b90323e009a507a3fed531718e5bea6\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
-144            <meta-data
-144-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\b885afb197cacc21853975c8916a970d\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
-145                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-145-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\b885afb197cacc21853975c8916a970d\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
-146                android:value="com.google.firebase.components.ComponentRegistrar" />
-146-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\b885afb197cacc21853975c8916a970d\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
-147            <meta-data
-147-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
-148                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-148-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
-149                android:value="com.google.firebase.components.ComponentRegistrar" />
-149-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
-150        </service>
-151
-152        <activity
-152-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:29:9-46:20
-153            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-153-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:30:13-80
-154            android:excludeFromRecents="true"
-154-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:31:13-46
-155            android:exported="true"
-155-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:32:13-36
-156            android:launchMode="singleTask"
-156-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:33:13-44
-157            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-157-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:34:13-72
-158            <intent-filter>
-158-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:35:13-45:29
-159                <action android:name="android.intent.action.VIEW" />
-159-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:36:17-69
-159-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:36:25-66
-160
-161                <category android:name="android.intent.category.DEFAULT" />
-161-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:38:17-76
-161-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:38:27-73
-162                <category android:name="android.intent.category.BROWSABLE" />
-162-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:39:17-78
-162-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:39:27-75
-163
-164                <data
-164-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:41:17-44:51
-165                    android:host="firebase.auth"
-165-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:42:21-49
-166                    android:path="/"
-166-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:43:21-37
-167                    android:scheme="genericidp" />
-167-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:44:21-48
-168            </intent-filter>
-169        </activity>
-170        <activity
-170-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:47:9-64:20
-171            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-171-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:48:13-79
-172            android:excludeFromRecents="true"
-172-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:49:13-46
-173            android:exported="true"
-173-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:50:13-36
-174            android:launchMode="singleTask"
-174-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:51:13-44
-175            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-175-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:52:13-72
-176            <intent-filter>
-176-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:53:13-63:29
-177                <action android:name="android.intent.action.VIEW" />
-177-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:36:17-69
-177-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:36:25-66
-178
-179                <category android:name="android.intent.category.DEFAULT" />
-179-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:38:17-76
-179-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:38:27-73
-180                <category android:name="android.intent.category.BROWSABLE" />
-180-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:39:17-78
-180-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:39:27-75
-181
-182                <data
-182-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:41:17-44:51
-183                    android:host="firebase.auth"
-183-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:42:21-49
-184                    android:path="/"
-184-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:43:21-37
-185                    android:scheme="recaptcha" />
-185-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\2bf98da5bc1400e20362650cf7fead46\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:44:21-48
-186            </intent-filter>
-187        </activity>
-188
-189        <property
-189-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:30:9-32:61
-190            android:name="android.adservices.AD_SERVICES_CONFIG"
-190-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:31:13-65
-191            android:resource="@xml/ga_ad_services_config" />
-191-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\fd556209bd65632560e17caf92d5f97a\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:32:13-58
-192
-193        <provider
-193-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-194            android:name="androidx.startup.InitializationProvider"
-194-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-195            android:authorities="com.tapri.androidx-startup"
-195-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-196            android:exported="false" >
-196-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-197            <meta-data
-197-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-198                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-198-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-199                android:value="androidx.startup" />
-199-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\7f9d9c25a97fb5eb471ce401369b5635\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-200            <meta-data
-200-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\EB197TS\.gradle\caches\transforms-3\038c093a521123ddfceda7a79fbe9885\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-201                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-201-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\EB197TS\.gradle\caches\transforms-3\038c093a521123ddfceda7a79fbe9885\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-202                android:value="androidx.startup" />
-202-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\EB197TS\.gradle\caches\transforms-3\038c093a521123ddfceda7a79fbe9885\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-203            <meta-data
-203-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-204                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-204-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-205                android:value="androidx.startup" />
-205-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-206        </provider>
-207        <provider
-207-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
-208            android:name="com.google.firebase.provider.FirebaseInitProvider"
-208-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
-209            android:authorities="com.tapri.firebaseinitprovider"
-209-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
-210            android:directBootAware="true"
-210-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
-211            android:exported="false"
-211-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
-212            android:initOrder="100" />
-212-->[com.google.firebase:firebase-common:20.4.2] C:\Users\EB197TS\.gradle\caches\transforms-3\92d25000f9dc5c5b20392a7e250ff44c\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
-213
-214        <receiver
-214-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:29:9-33:20
-215            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-215-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:30:13-85
-216            android:enabled="true"
-216-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:31:13-35
-217            android:exported="false" >
-217-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:32:13-37
-218        </receiver>
-219
-220        <service
-220-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:35:9-38:40
-221            android:name="com.google.android.gms.measurement.AppMeasurementService"
-221-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:36:13-84
-222            android:enabled="true"
-222-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:37:13-35
-223            android:exported="false" />
-223-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:38:13-37
-224        <service
-224-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:39:9-43:72
-225            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-225-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:40:13-87
-226            android:enabled="true"
-226-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:41:13-35
-227            android:exported="false"
-227-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:42:13-37
-228            android:permission="android.permission.BIND_JOB_SERVICE" />
-228-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\EB197TS\.gradle\caches\transforms-3\932c7f7d8639618be029c3a32ddb559b\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:43:13-69
-229
-230        <activity
-230-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\EB197TS\.gradle\caches\transforms-3\3153534edef3d62e6422385c64ff63d2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-231            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-231-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\EB197TS\.gradle\caches\transforms-3\3153534edef3d62e6422385c64ff63d2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-232            android:exported="false"
-232-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\EB197TS\.gradle\caches\transforms-3\3153534edef3d62e6422385c64ff63d2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-233            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-233-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\EB197TS\.gradle\caches\transforms-3\3153534edef3d62e6422385c64ff63d2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-234
-235        <uses-library
-235-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1cf41c5488fd6d1d4756758f9cba07b9\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-236            android:name="androidx.window.extensions"
-236-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1cf41c5488fd6d1d4756758f9cba07b9\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-237            android:required="false" />
-237-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1cf41c5488fd6d1d4756758f9cba07b9\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-238        <uses-library
-238-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1cf41c5488fd6d1d4756758f9cba07b9\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-239            android:name="androidx.window.sidecar"
-239-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1cf41c5488fd6d1d4756758f9cba07b9\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-240            android:required="false" />
-240-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1cf41c5488fd6d1d4756758f9cba07b9\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-241
-242        <meta-data
-242-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\EB197TS\.gradle\caches\transforms-3\276a073b40e4dda71497361088c23e35\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-243            android:name="com.google.android.gms.version"
-243-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\EB197TS\.gradle\caches\transforms-3\276a073b40e4dda71497361088c23e35\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-244            android:value="@integer/google_play_services_version" />
-244-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\EB197TS\.gradle\caches\transforms-3\276a073b40e4dda71497361088c23e35\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-245
-246        <uses-library
-246-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\EB197TS\.gradle\caches\transforms-3\7d44a662b6f9388fdb7c0c6eee64fb34\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:23:9-25:40
-247            android:name="android.ext.adservices"
-247-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\EB197TS\.gradle\caches\transforms-3\7d44a662b6f9388fdb7c0c6eee64fb34\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:24:13-50
-248            android:required="false" />
-248-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\EB197TS\.gradle\caches\transforms-3\7d44a662b6f9388fdb7c0c6eee64fb34\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:25:13-37
-249
-250        <receiver
-250-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-251            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-251-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-252            android:directBootAware="false"
-252-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-253            android:enabled="true"
-253-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-254            android:exported="true"
-254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-255            android:permission="android.permission.DUMP" >
-255-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-256            <intent-filter>
-256-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-257                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-257-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-257-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-258            </intent-filter>
-259            <intent-filter>
-259-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-260                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-260-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-260-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-261            </intent-filter>
-262            <intent-filter>
-262-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-263                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-263-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-263-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-264            </intent-filter>
-265            <intent-filter>
-265-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-266                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-266-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-266-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\1c95ec8138bd36ed9925aa9ce42018df\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-267            </intent-filter>
-268        </receiver>
-269    </application>
-270
-271</manifest>
+107-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:90:13-37
+108            android:launchMode="singleTop"
+108-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:91:13-43
+109            android:theme="@style/Theme.Tapri.NoActionBar" />
+109-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:92:13-59
+110        <activity
+110-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:93:9-96:62
+111            android:name="com.tapri.ui.NotificationsActivity"
+111-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:94:13-53
+112            android:exported="false"
+112-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:95:13-37
+113            android:theme="@style/Theme.Tapri.NoActionBar" />
+113-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:96:13-59
+114        <activity
+114-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:97:9-100:62
+115            android:name="com.tapri.ui.UnclaimedJobDetailsActivity"
+115-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:98:13-59
+116            android:exported="false"
+116-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:99:13-37
+117            android:theme="@style/Theme.Tapri.NoActionBar" />
+117-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:100:13-59
+118        <activity
+118-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:101:9-104:62
+119            android:name="com.tapri.ui.PostJobActivity"
+119-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:102:13-47
+120            android:exported="false"
+120-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:103:13-37
+121            android:theme="@style/Theme.Tapri.NoActionBar" />
+121-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:104:13-59
+122        <activity
+122-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:105:9-108:62
+123            android:name="com.tapri.ui.TipDetailsActivity"
+123-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:106:13-50
+124            android:exported="false"
+124-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:107:13-37
+125            android:theme="@style/Theme.Tapri.NoActionBar" />
+125-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:108:13-59
+126        <activity
+126-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:109:9-112:62
+127            android:name="com.tapri.ui.GroupChatActivity"
+127-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:110:13-49
+128            android:exported="false"
+128-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:111:13-37
+129            android:theme="@style/Theme.Tapri.NoActionBar" />
+129-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:112:13-59
+130        <activity
+130-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:113:9-116:62
+131            android:name="com.tapri.ui.ComingSoonActivity"
+131-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:114:13-50
+132            android:exported="false"
+132-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:115:13-37
+133            android:theme="@style/Theme.Tapri.NoActionBar" />
+133-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:116:13-59
+134        <activity
+134-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:117:9-120:62
+135            android:name="com.tapri.ui.EarnComingSoonActivity"
+135-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:118:13-54
+136            android:exported="false"
+136-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:119:13-37
+137            android:theme="@style/Theme.Tapri.NoActionBar" />
+137-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:120:13-59
+138        <activity
+138-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:121:9-124:62
+139            android:name="com.tapri.ui.CommentsActivity"
+139-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:122:13-48
+140            android:exported="false"
+140-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:123:13-37
+141            android:theme="@style/Theme.Tapri.NoActionBar" />
+141-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:124:13-59
+142        <activity
+142-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:125:9-128:62
+143            android:name="com.tapri.ui.VideoTrimmerActivity"
+143-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:126:13-52
+144            android:exported="false"
+144-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:127:13-37
+145            android:theme="@style/Theme.Tapri.NoActionBar" />
+145-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:128:13-59
+146        <activity
+146-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:129:9-132:62
+147            android:name="com.tapri.ui.PhotoCropperActivity"
+147-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:130:13-52
+148            android:exported="false"
+148-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:131:13-37
+149            android:theme="@style/Theme.Tapri.NoActionBar" />
+149-->D:\Tapri-full\Tapri_v0\app\src\main\AndroidManifest.xml:132:13-59
+150
+151        <provider
+151-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+152            android:name="androidx.startup.InitializationProvider"
+152-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+153            android:authorities="com.tapri.androidx-startup"
+153-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+154            android:exported="false" >
+154-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+155            <meta-data
+155-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+156                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+156-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+157                android:value="androidx.startup" />
+157-->[androidx.emoji2:emoji2:1.2.0] C:\Users\EB197TS\.gradle\caches\transforms-3\26fe8c7929600a0534dccb2c55474b6a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+158            <meta-data
+158-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\EB197TS\.gradle\caches\transforms-3\b7157c626c3f303d0b920d308b238051\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+159                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+159-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\EB197TS\.gradle\caches\transforms-3\b7157c626c3f303d0b920d308b238051\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+160                android:value="androidx.startup" />
+160-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\EB197TS\.gradle\caches\transforms-3\b7157c626c3f303d0b920d308b238051\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+161            <meta-data
+161-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+162                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+162-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+163                android:value="androidx.startup" />
+163-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+164        </provider>
+165
+166        <uses-library
+166-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\bdcbb52b5a7ad69852b7280893c752db\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+167            android:name="androidx.window.extensions"
+167-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\bdcbb52b5a7ad69852b7280893c752db\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+168            android:required="false" />
+168-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\bdcbb52b5a7ad69852b7280893c752db\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+169        <uses-library
+169-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\bdcbb52b5a7ad69852b7280893c752db\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+170            android:name="androidx.window.sidecar"
+170-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\bdcbb52b5a7ad69852b7280893c752db\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+171            android:required="false" />
+171-->[androidx.window:window:1.0.0] C:\Users\EB197TS\.gradle\caches\transforms-3\bdcbb52b5a7ad69852b7280893c752db\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+172
+173        <receiver
+173-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+174            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+175            android:directBootAware="false"
+175-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+176            android:enabled="true"
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+177            android:exported="true"
+177-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+178            android:permission="android.permission.DUMP" >
+178-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+179            <intent-filter>
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+180                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+181            </intent-filter>
+182            <intent-filter>
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+183                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+184            </intent-filter>
+185            <intent-filter>
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+186                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+187            </intent-filter>
+188            <intent-filter>
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+189                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\EB197TS\.gradle\caches\transforms-3\4c46fc38d53efae5f61091d21a7735e3\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+190            </intent-filter>
+191        </receiver>
+192    </application>
+193
+194</manifest>

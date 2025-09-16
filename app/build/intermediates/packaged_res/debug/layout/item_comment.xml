@@ -1,51 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="12dp"
-    android:gravity="top">
+    android:padding="16dp"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/commentUserAvatar"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:src="@drawable/ic_profile"
-        android:layout_marginEnd="12dp"
-        android:background="@drawable/circle_background"
-        android:padding="2dp"/>
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="4dp">
+            android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/commentUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="John Driver"
-                android:textStyle="bold"
+                android:text="User Name"
                 android:textSize="14sp"
-                android:textColor="@color/black"/>
+                android:textStyle="bold"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/commentTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2 hrs ago"
+                android:text="2h"
                 android:textSize="12sp"
-                android:textColor="#666666"
-                android:layout_marginStart="8dp"/>
+                android:textColor="@color/gray"
+                android:layout_marginStart="8dp" />
 
         </LinearLayout>
 
@@ -53,11 +50,12 @@
             android:id="@+id/commentText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Great information! This will help a lot of drivers."
+            android:text="Comment text goes here..."
             android:textSize="14sp"
             android:textColor="@color/black"
-            android:lineSpacingExtra="2dp"/>
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp" />
 
     </LinearLayout>
 
-</LinearLayout> 
+</LinearLayout>

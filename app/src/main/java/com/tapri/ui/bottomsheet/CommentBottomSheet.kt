@@ -55,7 +55,7 @@ class CommentBottomSheet : BottomSheetDialogFragment() {
     private fun initViews(view: View) {
         commentsRecyclerView = view.findViewById(R.id.commentsRecyclerView)
         commentInput = view.findViewById(R.id.commentInput)
-        sendCommentButton = view.findViewById(R.id.sendCommentButton)
+        sendCommentButton = view.findViewById(R.id.sendButton)
         commentCountText = view.findViewById(R.id.commentCount)
         
         // Set comment count

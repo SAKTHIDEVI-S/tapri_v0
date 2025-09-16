@@ -62,6 +62,7 @@
 
         <!-- Job Title -->
         <TextView
+            android:id="@+id/jobTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Grocery Delivery"
@@ -69,6 +70,17 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginBottom="24dp"/>
+
+        <!-- Job Description -->
+        <TextView
+            android:id="@+id/jobDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick up groceries from BigBasket and deliver to customer"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="20dp"/>
 
         <!-- Job Details Section -->
         <LinearLayout
@@ -95,10 +107,37 @@
                     android:layout_marginEnd="12dp"/>
 
                 <TextView
+                    android:id="@+id/hourlyRate"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="120/hr"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <!-- Pay Amount -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_rupee"
+                    android:tint="#666666"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/payAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="600"
                     android:textSize="16sp"
                     android:textColor="@color/black"/>
 
@@ -127,42 +166,11 @@
                     android:layout_marginEnd="12dp"/>
 
                 <TextView
+                    android:id="@+id/location"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Greens supermarket, JP Nagar"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
-
-            </LinearLayout>
-
-            <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- Date and Time -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_calendar"
-                    android:tint="#666666"
-                    android:layout_marginEnd="12dp"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="30/06/2025, 11:00 AM - 3:00 PM"
                     android:textSize="16sp"
                     android:textColor="@color/black"/>
 
@@ -190,6 +198,7 @@
                     android:layout_marginEnd="12dp"/>
 
                 <TextView
+                    android:id="@+id/contactPhone"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

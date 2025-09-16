@@ -4,13 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA">
+    android:background="#F8F9FA">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#FAFAFA">
+        android:background="#F8F9FA">
 
     <!-- Header -->
     <LinearLayout
@@ -21,7 +21,9 @@
         android:gravity="center_vertical"
         android:paddingHorizontal="20dp"
         android:paddingTop="20dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
 
         <TextView
             android:id="@+id/backButton"
@@ -41,380 +43,226 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Tapri"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="#1A1A1A"
             android:gravity="center"/>
 
-        <View
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:tint="#666666"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <!-- Loading and Error States -->
+    <ImageView
+        android:id="@+id/loadingGifView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/errorMessageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Failed to load groups"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Retry"
+        android:textSize="16sp"
+        android:textColor="#E53935"
+        android:textStyle="bold"
+        android:background="@drawable/common_back_button"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"/>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyStateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
             android:layout_width="80dp"
-            android:layout_height="24dp"/>
+            android:layout_height="80dp"
+            android:src="@drawable/ic_groups"
+            android:tint="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/emptyMessageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No groups found"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join some groups to get started"
+            android:textSize="14sp"
+            android:textColor="#999999"/>
 
     </LinearLayout>
 
     <!-- Scrollable Content -->
-    <ScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="100dp">
+            android:layout_height="match_parent">
 
-            <!-- Create Post Button -->
             <LinearLayout
-                android:id="@+id/createPostButton"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:background="@drawable/primary_button_background"
-                android:layout_marginBottom="24dp"
-                android:clickable="true"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_plus"
-                    android:tint="@color/white"
-                    android:layout_marginEnd="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Create Post"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-
-            </LinearLayout>
-
-            <!-- My Groups Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My groups"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- My Groups List -->
-            <LinearLayout
-                android:id="@+id/myGroupsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginBottom="32dp">
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="100dp">
 
-                <!-- Group Item 1 -->
+                <!-- Create New Group Button -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_profile"
-                        android:tint="#CCCCCC"
-                        android:layout_marginEnd="12dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ola Drivers"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Latest news today: Ola drivers are now eligible..."
-                            android:textSize="14sp"
-                            android:textColor="#666666"
-                            android:layout_marginTop="2dp"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <!-- Group Item 2 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_profile"
-                        android:tint="#CCCCCC"
-                        android:layout_marginEnd="12dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ola Drivers"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Latest news today: Ola drivers are now eligible..."
-                            android:textSize="14sp"
-                            android:textColor="#666666"
-                            android:layout_marginTop="2dp"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- Discover New Groups Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Discover new groups"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- Discover Groups List -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <!-- Group Item 1 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/card_stroke_background"
-                    android:padding="16dp"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_profile"
-                        android:tint="#CCCCCC"
-                        android:layout_marginEnd="12dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ola Drivers"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="26K Followers"
-                            android:textSize="14sp"
-                            android:textColor="#666666"
-                            android:layout_marginTop="2dp"/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/joinButton1"
-                        android:layout_width="60dp"
-                        android:layout_height="32dp"
-                        android:text="Join"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:background="@drawable/primary_button_background"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                </LinearLayout>
-
-                <!-- Group Item 2 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/card_stroke_background"
-                    android:padding="16dp"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_profile"
-                        android:tint="#CCCCCC"
-                        android:layout_marginEnd="12dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ola Drivers"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="30K Followers"
-                            android:textSize="14sp"
-                            android:textColor="#666666"
-                            android:layout_marginTop="2dp"/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/joinButton2"
-                        android:layout_width="60dp"
-                        android:layout_height="32dp"
-                        android:text="Join"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:background="@drawable/primary_button_background"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                </LinearLayout>
-
-                <!-- Group Item 3 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/card_stroke_background"
-                    android:padding="16dp"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_profile"
-                        android:tint="#CCCCCC"
-                        android:layout_marginEnd="12dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ola Drivers"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="30K Followers"
-                            android:textSize="14sp"
-                            android:textColor="#666666"
-                            android:layout_marginTop="2dp"/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/joinButton3"
-                        android:layout_width="60dp"
-                        android:layout_height="32dp"
-                        android:text="Join"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:background="@drawable/primary_button_background"
-                        android:clickable="true"
-                        android:focusable="true"/>
-
-                </LinearLayout>
-
-                <!-- Explore More Option -->
-                <LinearLayout
-                    android:id="@+id/exploreMoreButton"
+                    android:id="@+id/createGroupButton"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@drawable/card_stroke_background"
-                    android:layout_marginTop="8dp"
+                    android:background="@drawable/primary_button_background"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
                     android:focusable="true">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Explore more groups"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#E53935"/>
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_right"
-                        android:tint="#E53935"
-                        android:layout_marginStart="8dp"/>
+                        android:src="@drawable/ic_plus"
+                        android:tint="@color/white"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create New Group"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
+                <!-- My Groups Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="My Groups"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <TextView
+                        android:id="@+id/seeAllMyGroupsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textSize="14sp"
+                        android:textColor="#E53935"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- My Groups RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/myGroupsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:nestedScrollingEnabled="false"/>
+
+                <!-- Discover New Groups Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Discover Groups"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <TextView
+                        android:id="@+id/seeAllDiscoverButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textSize="14sp"
+                        android:textColor="#E53935"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- Discover Groups RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/discoverGroupsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+
             </LinearLayout>
 
-        </LinearLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
 
     <!-- Bottom Navigation Bar with 5 evenly distributed items -->
     <LinearLayout
@@ -444,14 +292,14 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_home"
-                android:tint="@color/black" />
+                android:tint="@color/bottom_nav_icon_color" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="Home"
-                android:textColor="@color/black"
+                android:textColor="@color/bottom_nav_icon_color"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -479,7 +327,8 @@
                 android:layout_marginTop="2dp"
                 android:text="Tapri"
                 android:textColor="#E53935"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -518,14 +367,14 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_info"
-                android:tint="@color/black" />
+                android:tint="@color/bottom_nav_icon_color" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="Info"
-                android:textColor="@color/black"
+                android:textColor="@color/bottom_nav_icon_color"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -545,43 +394,25 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_tips"
-                android:tint="@color/black" />
+                android:tint="@color/bottom_nav_icon_color" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="Tips"
-                android:textColor="@color/black"
+                android:textColor="@color/bottom_nav_icon_color"
                 android:textSize="12sp" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    </LinearLayout>
-
-    <!-- New Group Floating Action Button -->
-    <ImageView
-        android:id="@+id/newGroupButton"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:src="@drawable/ic_group_plus"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="80dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@drawable/earn_circle_background"
-        android:elevation="8dp"
-        android:padding="16dp"
-        android:scaleType="fitCenter"
-        android:layout_gravity="bottom|end"/>
-
     <ImageView
         android:id="@+id/earnButton"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:background="@drawable/circle_background"
+        android:background="@drawable/earn_button_red_background"
         android:elevation="12dp"
         android:padding="12dp"
         android:src="@drawable/ic_earn"

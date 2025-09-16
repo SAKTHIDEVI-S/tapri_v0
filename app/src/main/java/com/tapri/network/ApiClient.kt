@@ -10,9 +10,20 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.lang.reflect.Type
+import com.tapri.utils.SessionManager
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.ResponseBody.Companion.toResponseBody
 
 object ApiClient {
-    private const val BASE_URL = "http://172.20.10.4:8080/api/auth/"
+    // Use Config for environment-specific URLs
+    private fun getBaseUrl() = com.tapri.utils.Config.getBaseUrl()
+    private fun getAuthBaseUrl() = "${getBaseUrl()}auth/"
+    private fun getEarnBaseUrl() = "${getBaseUrl()}earn/"
+    private fun getPostsBaseUrl() = "${getBaseUrl()}posts/"
+    private fun getGroupsBaseUrl() = "${getBaseUrl()}groups/"
+    private fun getChatBaseUrl() = "${getBaseUrl()}chat/"
+    private fun getProfileBaseUrl() = "${getBaseUrl()}profile/"
+    private fun getImagesBaseUrl() = "${getBaseUrl()}images/"
     
     private val gson = GsonBuilder()
         .setLenient() // This enables lenient JSON parsing
@@ -31,29 +42,113 @@ object ApiClient {
         android.util.Log.d("API_RESPONSE", "Status: ${response.code}")
         android.util.Log.d("API_RESPONSE", "Content-Type: ${response.header("Content-Type")}")
         
-        // If response is not JSON, log the body for debugging
         val contentType = response.header("Content-Type") ?: ""
         if (!contentType.contains("application/json")) {
             val responseBody = response.body?.string()
             android.util.Log.e("API_RESPONSE", "Non-JSON response: $responseBody")
-            // Recreate response since we consumed the body
+            val mediaType = response.body?.contentType() ?: "text/plain".toMediaTypeOrNull()
             return@Interceptor response.newBuilder()
-                .body(okhttp3.ResponseBody.create(response.body?.contentType(), responseBody ?: ""))
+                .body((responseBody ?: "").toResponseBody(mediaType))
                 .build()
         }
         
         response
     }
+
+    private fun authInterceptor(sessionManager: SessionManager) = Interceptor { chain ->
+        val original = chain.request()
+        val token = sessionManager.getAuthToken()
+        
+        // Debug logging
+        android.util.Log.d("ApiClient", "Auth interceptor - Token: $token")
+        android.util.Log.d("ApiClient", "Request URL: ${original.url}")
+        
+        val builder = original.newBuilder()
+        if (!token.isNullOrEmpty()) {
+            builder.addHeader("Authorization", "Bearer $token")
+            android.util.Log.d("ApiClient", "Added Authorization header: Bearer $token")
+        } else {
+            android.util.Log.w("ApiClient", "No auth token available")
+        }
+        
+        val newRequest = builder.build()
+        android.util.Log.d("ApiClient", "Final request headers: ${newRequest.headers}")
+        
+        chain.proceed(newRequest)
+    }
     
-    private val okHttpClient = OkHttpClient.Builder()
-        .addInterceptor(loggingInterceptor)
-        .addInterceptor(responseInterceptor)
-        .build()
+    private fun buildClient(sessionManager: SessionManager): OkHttpClient {
+        val timeout = com.tapri.utils.Config.getApiTimeout()
+        return OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
+            .addInterceptor(authInterceptor(sessionManager))
+            .addInterceptor(responseInterceptor)
+            .connectTimeout(timeout, java.util.concurrent.TimeUnit.MILLISECONDS)
+            .readTimeout(timeout, java.util.concurrent.TimeUnit.MILLISECONDS)
+            .writeTimeout(timeout, java.util.concurrent.TimeUnit.MILLISECONDS)
+            .build()
+    }
+
+    fun authRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getAuthBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create()) // Handle plain text responses
+            .addConverterFactory(GsonConverterFactory.create(gson)) // Handle JSON responses
+            .build()
+    }
+
+    fun earnRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getEarnBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
     
-    val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .client(okHttpClient)
-        .addConverterFactory(ScalarsConverterFactory.create()) // Handle plain text responses
-        .addConverterFactory(GsonConverterFactory.create(gson)) // Handle JSON responses
-        .build()
+    fun postsRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getPostsBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
+    
+    fun groupsRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getGroupsBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
+    
+    fun chatRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getChatBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
+    
+    fun profileRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getProfileBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
+    
+    fun imageRetrofit(sessionManager: SessionManager): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(getImagesBaseUrl())
+            .client(buildClient(sessionManager))
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
 } 

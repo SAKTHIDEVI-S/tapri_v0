@@ -25,10 +25,28 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final TextView backButton;
 
   @NonNull
+  public final LinearLayout errorContainer;
+
+  @NonNull
+  public final TextView errorMessageView;
+
+  @NonNull
+  public final ImageView loadingGifView;
+
+  @NonNull
   public final LinearLayout logoutButton;
 
   @NonNull
+  public final LinearLayout mainContent;
+
+  @NonNull
+  public final LinearLayout myPostsButton;
+
+  @NonNull
   public final ImageView profilePic;
+
+  @NonNull
+  public final TextView retryButton;
 
   @NonNull
   public final LinearLayout savedPostsButton;
@@ -40,29 +58,29 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final LinearLayout taskHistoryButton;
 
   @NonNull
-  public final TextView todayEarnings;
-
-  @NonNull
   public final TextView userName;
 
-  @NonNull
-  public final TextView userRating;
-
   private ActivityProfileBinding(@NonNull ConstraintLayout rootView, @NonNull TextView backButton,
-      @NonNull LinearLayout logoutButton, @NonNull ImageView profilePic,
+      @NonNull LinearLayout errorContainer, @NonNull TextView errorMessageView,
+      @NonNull ImageView loadingGifView, @NonNull LinearLayout logoutButton,
+      @NonNull LinearLayout mainContent, @NonNull LinearLayout myPostsButton,
+      @NonNull ImageView profilePic, @NonNull TextView retryButton,
       @NonNull LinearLayout savedPostsButton, @NonNull LinearLayout settingsButton,
-      @NonNull LinearLayout taskHistoryButton, @NonNull TextView todayEarnings,
-      @NonNull TextView userName, @NonNull TextView userRating) {
+      @NonNull LinearLayout taskHistoryButton, @NonNull TextView userName) {
     this.rootView = rootView;
     this.backButton = backButton;
+    this.errorContainer = errorContainer;
+    this.errorMessageView = errorMessageView;
+    this.loadingGifView = loadingGifView;
     this.logoutButton = logoutButton;
+    this.mainContent = mainContent;
+    this.myPostsButton = myPostsButton;
     this.profilePic = profilePic;
+    this.retryButton = retryButton;
     this.savedPostsButton = savedPostsButton;
     this.settingsButton = settingsButton;
     this.taskHistoryButton = taskHistoryButton;
-    this.todayEarnings = todayEarnings;
     this.userName = userName;
-    this.userRating = userRating;
   }
 
   @Override
@@ -98,15 +116,51 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.errorContainer;
+      LinearLayout errorContainer = ViewBindings.findChildViewById(rootView, id);
+      if (errorContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.errorMessageView;
+      TextView errorMessageView = ViewBindings.findChildViewById(rootView, id);
+      if (errorMessageView == null) {
+        break missingId;
+      }
+
+      id = R.id.loadingGifView;
+      ImageView loadingGifView = ViewBindings.findChildViewById(rootView, id);
+      if (loadingGifView == null) {
+        break missingId;
+      }
+
       id = R.id.logoutButton;
       LinearLayout logoutButton = ViewBindings.findChildViewById(rootView, id);
       if (logoutButton == null) {
         break missingId;
       }
 
+      id = R.id.mainContent;
+      LinearLayout mainContent = ViewBindings.findChildViewById(rootView, id);
+      if (mainContent == null) {
+        break missingId;
+      }
+
+      id = R.id.myPostsButton;
+      LinearLayout myPostsButton = ViewBindings.findChildViewById(rootView, id);
+      if (myPostsButton == null) {
+        break missingId;
+      }
+
       id = R.id.profilePic;
       ImageView profilePic = ViewBindings.findChildViewById(rootView, id);
       if (profilePic == null) {
+        break missingId;
+      }
+
+      id = R.id.retryButton;
+      TextView retryButton = ViewBindings.findChildViewById(rootView, id);
+      if (retryButton == null) {
         break missingId;
       }
 
@@ -128,27 +182,15 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.todayEarnings;
-      TextView todayEarnings = ViewBindings.findChildViewById(rootView, id);
-      if (todayEarnings == null) {
-        break missingId;
-      }
-
       id = R.id.userName;
       TextView userName = ViewBindings.findChildViewById(rootView, id);
       if (userName == null) {
         break missingId;
       }
 
-      id = R.id.userRating;
-      TextView userRating = ViewBindings.findChildViewById(rootView, id);
-      if (userRating == null) {
-        break missingId;
-      }
-
-      return new ActivityProfileBinding((ConstraintLayout) rootView, backButton, logoutButton,
-          profilePic, savedPostsButton, settingsButton, taskHistoryButton, todayEarnings, userName,
-          userRating);
+      return new ActivityProfileBinding((ConstraintLayout) rootView, backButton, errorContainer,
+          errorMessageView, loadingGifView, logoutButton, mainContent, myPostsButton, profilePic,
+          retryButton, savedPostsButton, settingsButton, taskHistoryButton, userName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

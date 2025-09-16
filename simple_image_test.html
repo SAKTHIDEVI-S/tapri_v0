@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .success { color: green; }
+        .error { color: red; }
+        img { max-width: 300px; height: auto; margin: 10px; border: 1px solid #ddd; }
+        .status { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Direct File Access (Should Work)</h2>
+        <p>These images are accessed directly from the file system:</p>
+        <div>
+            <img src="uploads/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" 
+                 alt="Image 1" 
+                 onload="document.getElementById('status1').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status1').innerHTML='❌ Failed'">
+            <p class="status" id="status1">Testing...</p>
+        </div>
+        
+        <div>
+            <img src="uploads/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg" 
+                 alt="Image 2" 
+                 onload="document.getElementById('status2').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status2').innerHTML='❌ Failed'">
+            <p class="status" id="status2">Testing...</p>
+        </div>
+        
+        <div>
+            <img src="uploads/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg" 
+                 alt="Image 3" 
+                 onload="document.getElementById('status3').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status3').innerHTML='❌ Failed'">
+            <p class="status" id="status3">Testing...</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: Backend API URLs (Requires Backend Running)</h2>
+        <p>These images are accessed through the backend API:</p>
+        <div>
+            <img src="http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" 
+                 alt="API Image 1" 
+                 onload="document.getElementById('status4').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status4').innerHTML='❌ Failed'">
+            <p class="status" id="status4">Testing...</p>
+        </div>
+        
+        <div>
+            <img src="http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg" 
+                 alt="API Image 2" 
+                 onload="document.getElementById('status5').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status5').innerHTML='❌ Failed'">
+            <p class="status" id="status5">Testing...</p>
+        </div>
+        
+        <div>
+            <img src="http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg" 
+                 alt="API Image 3" 
+                 onload="document.getElementById('status6').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status6').innerHTML='❌ Failed'">
+            <p class="status" id="status6">Testing...</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: External Images (Should Always Work)</h2>
+        <p>These are external images for comparison:</p>
+        <div>
+            <img src="https://picsum.photos/400/300?random=1" 
+                 alt="External Image 1" 
+                 onload="document.getElementById('status7').innerHTML='✅ Loaded'"
+                 onerror="document.getElementById('status7').innerHTML='❌ Failed'">
+            <p class="status" id="status7">Testing...</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Instructions</h2>
+        <ol>
+            <li><strong>Test 1</strong> should work immediately - it loads images directly from the file system</li>
+            <li><strong>Test 2</strong> requires the backend to be running on port 8080</li>
+            <li><strong>Test 3</strong> should always work as it uses external images</li>
+        </ol>
+        
+        <h3>To start the backend:</h3>
+        <pre>
+1. Open terminal in the project root
+2. Run: cd src
+3. Run: java -cp "target/classes;target/dependency/*" com.tapri.TapriApplication
+        </pre>
+        
+        <h3>Alternative - Run with Maven:</h3>
+        <pre>
+1. Open terminal in the project root  
+2. Run: mvn spring-boot:run -Dspring-boot.run.main-class=com.tapri.TapriApplication
+        </pre>
+    </div>
+    
+    <script>
+        console.log('Image test page loaded');
+        
+        // Log all image load events
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('load', () => {
+                console.log(`Image ${index + 1} loaded successfully:`, img.src);
+            });
+            img.addEventListener('error', () => {
+                console.log(`Image ${index + 1} failed to load:`, img.src);
+            });
+        });
+    </script>
+</body>
+</html>

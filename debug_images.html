@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Debug Tool</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .success { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        .info { color: blue; }
+        img { max-width: 200px; height: auto; margin: 10px; border: 2px solid #ddd; }
+        .log { background: #f5f5f5; padding: 10px; margin: 10px 0; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Image Debug Tool</h1>
+    
+    <div class="test">
+        <h2>Test 1: Check if files exist locally</h2>
+        <p>These should work if the files exist in the uploads folder:</p>
+        <div id="local-test">
+            <img src="uploads/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" 
+                 alt="Local Image 1" 
+                 onload="logResult('Local Image 1', 'SUCCESS', this.src)"
+                 onerror="logResult('Local Image 1', 'FAILED', this.src)">
+        </div>
+    </div>
+    
+    <div class="test">
+        <h2>Test 2: Check backend API (if running)</h2>
+        <p>These require the backend to be running on port 8080:</p>
+        <div id="api-test">
+            <img src="http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" 
+                 alt="API Image 1" 
+                 onload="logResult('API Image 1', 'SUCCESS', this.src)"
+                 onerror="logResult('API Image 1', 'FAILED', this.src)">
+        </div>
+    </div>
+    
+    <div class="test">
+        <h2>Test 3: Check network connectivity</h2>
+        <p>Test if we can reach external resources:</p>
+        <div id="network-test">
+            <img src="https://picsum.photos/200/150?random=1" 
+                 alt="External Image" 
+                 onload="logResult('External Image', 'SUCCESS', this.src)"
+                 onerror="logResult('External Image', 'FAILED', this.src)">
+        </div>
+    </div>
+    
+    <div class="test">
+        <h2>Test 4: Check Android app URLs</h2>
+        <p>Test the exact URLs that the Android app would use:</p>
+        <div id="android-test">
+            <img src="http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" 
+                 alt="Android URL 1" 
+                 onload="logResult('Android URL 1', 'SUCCESS', this.src)"
+                 onerror="logResult('Android URL 1', 'FAILED', this.src)">
+            <img src="http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg" 
+                 alt="Android URL 2" 
+                 onload="logResult('Android URL 2', 'SUCCESS', this.src)"
+                 onerror="logResult('Android URL 2', 'FAILED', this.src)">
+            <img src="http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg" 
+                 alt="Android URL 3" 
+                 onload="logResult('Android URL 3', 'SUCCESS', this.src)"
+                 onerror="logResult('Android URL 3', 'FAILED', this.src)">
+        </div>
+    </div>
+    
+    <div class="test">
+        <h2>Debug Log</h2>
+        <div id="debug-log" class="log"></div>
+        <button onclick="clearLog()">Clear Log</button>
+        <button onclick="testAllUrls()">Test All URLs</button>
+    </div>
+    
+    <div class="test">
+        <h2>Instructions</h2>
+        <ol>
+            <li><strong>Open this file in your browser</strong> (double-click or right-click → Open with)</li>
+            <li><strong>Check the debug log</strong> to see which tests pass/fail</li>
+            <li><strong>If Test 1 fails:</strong> The image files don't exist in the uploads folder</li>
+            <li><strong>If Test 2 fails:</strong> The backend is not running or not accessible</li>
+            <li><strong>If Test 3 fails:</strong> There's a network connectivity issue</li>
+            <li><strong>If Test 4 fails:</strong> The backend API is not working properly</li>
+        </ol>
+    </div>
+    
+    <script>
+        function logResult(testName, result, url) {
+            const log = document.getElementById('debug-log');
+            const timestamp = new Date().toLocaleTimeString();
+            const status = result === 'SUCCESS' ? 'success' : 'error';
+            log.innerHTML += `<div class="${status}">[${timestamp}] ${testName}: ${result} - ${url}</div>`;
+            console.log(`${testName}: ${result} - ${url}`);
+        }
+        
+        function clearLog() {
+            document.getElementById('debug-log').innerHTML = '';
+        }
+        
+        function testAllUrls() {
+            clearLog();
+            logResult('Debug Tool', 'INFO', 'Starting comprehensive URL test...');
+            
+            // Test all URLs programmatically
+            const urls = [
+                'uploads/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg',
+                'uploads/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg',
+                'uploads/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg',
+                'http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg',
+                'http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg',
+                'http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg',
+                'https://picsum.photos/200/150?random=1'
+            ];
+            
+            urls.forEach((url, index) => {
+                const img = new Image();
+                img.onload = () => logResult(`URL Test ${index + 1}`, 'SUCCESS', url);
+                img.onerror = () => logResult(`URL Test ${index + 1}`, 'FAILED', url);
+                img.src = url;
+            });
+        }
+        
+        // Auto-start the test when page loads
+        window.onload = function() {
+            logResult('Debug Tool', 'INFO', 'Page loaded, starting tests...');
+            setTimeout(testAllUrls, 1000);
+        };
+    </script>
+</body>
+</html>

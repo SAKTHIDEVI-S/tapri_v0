@@ -4,10 +4,9 @@ package com.tapri.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
@@ -20,7 +19,7 @@ import java.lang.String;
 
 public final class ActivityOnboardingBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final MaterialButton continueButton;
@@ -29,24 +28,20 @@ public final class ActivityOnboardingBinding implements ViewBinding {
   public final ViewPager2 onboardingViewPager;
 
   @NonNull
-  public final TabLayout tabDots;
+  public final TabLayout tabLayout;
 
-  @NonNull
-  public final ImageView waveImage;
-
-  private ActivityOnboardingBinding(@NonNull ConstraintLayout rootView,
+  private ActivityOnboardingBinding(@NonNull LinearLayout rootView,
       @NonNull MaterialButton continueButton, @NonNull ViewPager2 onboardingViewPager,
-      @NonNull TabLayout tabDots, @NonNull ImageView waveImage) {
+      @NonNull TabLayout tabLayout) {
     this.rootView = rootView;
     this.continueButton = continueButton;
     this.onboardingViewPager = onboardingViewPager;
-    this.tabDots = tabDots;
-    this.waveImage = waveImage;
+    this.tabLayout = tabLayout;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -83,20 +78,14 @@ public final class ActivityOnboardingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tabDots;
-      TabLayout tabDots = ViewBindings.findChildViewById(rootView, id);
-      if (tabDots == null) {
+      id = R.id.tabLayout;
+      TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayout == null) {
         break missingId;
       }
 
-      id = R.id.waveImage;
-      ImageView waveImage = ViewBindings.findChildViewById(rootView, id);
-      if (waveImage == null) {
-        break missingId;
-      }
-
-      return new ActivityOnboardingBinding((ConstraintLayout) rootView, continueButton,
-          onboardingViewPager, tabDots, waveImage);
+      return new ActivityOnboardingBinding((LinearLayout) rootView, continueButton,
+          onboardingViewPager, tabLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

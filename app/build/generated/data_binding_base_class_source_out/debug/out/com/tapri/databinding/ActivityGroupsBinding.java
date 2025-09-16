@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.tapri.R;
@@ -25,7 +27,10 @@ public final class ActivityGroupsBinding implements ViewBinding {
   public final TextView backButton;
 
   @NonNull
-  public final LinearLayout createPostButton;
+  public final LinearLayout createGroupButton;
+
+  @NonNull
+  public final RecyclerView discoverGroupsRecyclerView;
 
   @NonNull
   public final ImageView earnButton;
@@ -34,7 +39,13 @@ public final class ActivityGroupsBinding implements ViewBinding {
   public final LinearLayout earnNav;
 
   @NonNull
-  public final LinearLayout exploreMoreButton;
+  public final TextView emptyMessageView;
+
+  @NonNull
+  public final LinearLayout emptyStateView;
+
+  @NonNull
+  public final TextView errorMessageView;
 
   @NonNull
   public final LinearLayout header;
@@ -46,22 +57,28 @@ public final class ActivityGroupsBinding implements ViewBinding {
   public final LinearLayout infoNav;
 
   @NonNull
-  public final TextView joinButton1;
-
-  @NonNull
-  public final TextView joinButton2;
-
-  @NonNull
-  public final TextView joinButton3;
-
-  @NonNull
   public final LinearLayout linearLayout2;
 
   @NonNull
-  public final LinearLayout myGroupsContainer;
+  public final ImageView loadingGifView;
 
   @NonNull
-  public final ImageView newGroupButton;
+  public final RecyclerView myGroupsRecyclerView;
+
+  @NonNull
+  public final TextView retryButton;
+
+  @NonNull
+  public final ImageView searchButton;
+
+  @NonNull
+  public final TextView seeAllDiscoverButton;
+
+  @NonNull
+  public final TextView seeAllMyGroupsButton;
+
+  @NonNull
+  public final SwipeRefreshLayout swipeRefreshLayout;
 
   @NonNull
   public final LinearLayout tapriNav;
@@ -70,28 +87,36 @@ public final class ActivityGroupsBinding implements ViewBinding {
   public final LinearLayout tipsNav;
 
   private ActivityGroupsBinding(@NonNull CoordinatorLayout rootView, @NonNull TextView backButton,
-      @NonNull LinearLayout createPostButton, @NonNull ImageView earnButton,
-      @NonNull LinearLayout earnNav, @NonNull LinearLayout exploreMoreButton,
-      @NonNull LinearLayout header, @NonNull LinearLayout homeNav, @NonNull LinearLayout infoNav,
-      @NonNull TextView joinButton1, @NonNull TextView joinButton2, @NonNull TextView joinButton3,
-      @NonNull LinearLayout linearLayout2, @NonNull LinearLayout myGroupsContainer,
-      @NonNull ImageView newGroupButton, @NonNull LinearLayout tapriNav,
-      @NonNull LinearLayout tipsNav) {
+      @NonNull LinearLayout createGroupButton, @NonNull RecyclerView discoverGroupsRecyclerView,
+      @NonNull ImageView earnButton, @NonNull LinearLayout earnNav,
+      @NonNull TextView emptyMessageView, @NonNull LinearLayout emptyStateView,
+      @NonNull TextView errorMessageView, @NonNull LinearLayout header,
+      @NonNull LinearLayout homeNav, @NonNull LinearLayout infoNav,
+      @NonNull LinearLayout linearLayout2, @NonNull ImageView loadingGifView,
+      @NonNull RecyclerView myGroupsRecyclerView, @NonNull TextView retryButton,
+      @NonNull ImageView searchButton, @NonNull TextView seeAllDiscoverButton,
+      @NonNull TextView seeAllMyGroupsButton, @NonNull SwipeRefreshLayout swipeRefreshLayout,
+      @NonNull LinearLayout tapriNav, @NonNull LinearLayout tipsNav) {
     this.rootView = rootView;
     this.backButton = backButton;
-    this.createPostButton = createPostButton;
+    this.createGroupButton = createGroupButton;
+    this.discoverGroupsRecyclerView = discoverGroupsRecyclerView;
     this.earnButton = earnButton;
     this.earnNav = earnNav;
-    this.exploreMoreButton = exploreMoreButton;
+    this.emptyMessageView = emptyMessageView;
+    this.emptyStateView = emptyStateView;
+    this.errorMessageView = errorMessageView;
     this.header = header;
     this.homeNav = homeNav;
     this.infoNav = infoNav;
-    this.joinButton1 = joinButton1;
-    this.joinButton2 = joinButton2;
-    this.joinButton3 = joinButton3;
     this.linearLayout2 = linearLayout2;
-    this.myGroupsContainer = myGroupsContainer;
-    this.newGroupButton = newGroupButton;
+    this.loadingGifView = loadingGifView;
+    this.myGroupsRecyclerView = myGroupsRecyclerView;
+    this.retryButton = retryButton;
+    this.searchButton = searchButton;
+    this.seeAllDiscoverButton = seeAllDiscoverButton;
+    this.seeAllMyGroupsButton = seeAllMyGroupsButton;
+    this.swipeRefreshLayout = swipeRefreshLayout;
     this.tapriNav = tapriNav;
     this.tipsNav = tipsNav;
   }
@@ -129,9 +154,15 @@ public final class ActivityGroupsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.createPostButton;
-      LinearLayout createPostButton = ViewBindings.findChildViewById(rootView, id);
-      if (createPostButton == null) {
+      id = R.id.createGroupButton;
+      LinearLayout createGroupButton = ViewBindings.findChildViewById(rootView, id);
+      if (createGroupButton == null) {
+        break missingId;
+      }
+
+      id = R.id.discoverGroupsRecyclerView;
+      RecyclerView discoverGroupsRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (discoverGroupsRecyclerView == null) {
         break missingId;
       }
 
@@ -147,9 +178,21 @@ public final class ActivityGroupsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.exploreMoreButton;
-      LinearLayout exploreMoreButton = ViewBindings.findChildViewById(rootView, id);
-      if (exploreMoreButton == null) {
+      id = R.id.emptyMessageView;
+      TextView emptyMessageView = ViewBindings.findChildViewById(rootView, id);
+      if (emptyMessageView == null) {
+        break missingId;
+      }
+
+      id = R.id.emptyStateView;
+      LinearLayout emptyStateView = ViewBindings.findChildViewById(rootView, id);
+      if (emptyStateView == null) {
+        break missingId;
+      }
+
+      id = R.id.errorMessageView;
+      TextView errorMessageView = ViewBindings.findChildViewById(rootView, id);
+      if (errorMessageView == null) {
         break missingId;
       }
 
@@ -171,39 +214,51 @@ public final class ActivityGroupsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.joinButton1;
-      TextView joinButton1 = ViewBindings.findChildViewById(rootView, id);
-      if (joinButton1 == null) {
-        break missingId;
-      }
-
-      id = R.id.joinButton2;
-      TextView joinButton2 = ViewBindings.findChildViewById(rootView, id);
-      if (joinButton2 == null) {
-        break missingId;
-      }
-
-      id = R.id.joinButton3;
-      TextView joinButton3 = ViewBindings.findChildViewById(rootView, id);
-      if (joinButton3 == null) {
-        break missingId;
-      }
-
       id = R.id.linearLayout2;
       LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout2 == null) {
         break missingId;
       }
 
-      id = R.id.myGroupsContainer;
-      LinearLayout myGroupsContainer = ViewBindings.findChildViewById(rootView, id);
-      if (myGroupsContainer == null) {
+      id = R.id.loadingGifView;
+      ImageView loadingGifView = ViewBindings.findChildViewById(rootView, id);
+      if (loadingGifView == null) {
         break missingId;
       }
 
-      id = R.id.newGroupButton;
-      ImageView newGroupButton = ViewBindings.findChildViewById(rootView, id);
-      if (newGroupButton == null) {
+      id = R.id.myGroupsRecyclerView;
+      RecyclerView myGroupsRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (myGroupsRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.retryButton;
+      TextView retryButton = ViewBindings.findChildViewById(rootView, id);
+      if (retryButton == null) {
+        break missingId;
+      }
+
+      id = R.id.searchButton;
+      ImageView searchButton = ViewBindings.findChildViewById(rootView, id);
+      if (searchButton == null) {
+        break missingId;
+      }
+
+      id = R.id.seeAllDiscoverButton;
+      TextView seeAllDiscoverButton = ViewBindings.findChildViewById(rootView, id);
+      if (seeAllDiscoverButton == null) {
+        break missingId;
+      }
+
+      id = R.id.seeAllMyGroupsButton;
+      TextView seeAllMyGroupsButton = ViewBindings.findChildViewById(rootView, id);
+      if (seeAllMyGroupsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.swipeRefreshLayout;
+      SwipeRefreshLayout swipeRefreshLayout = ViewBindings.findChildViewById(rootView, id);
+      if (swipeRefreshLayout == null) {
         break missingId;
       }
 
@@ -219,10 +274,11 @@ public final class ActivityGroupsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityGroupsBinding((CoordinatorLayout) rootView, backButton, createPostButton,
-          earnButton, earnNav, exploreMoreButton, header, homeNav, infoNav, joinButton1,
-          joinButton2, joinButton3, linearLayout2, myGroupsContainer, newGroupButton, tapriNav,
-          tipsNav);
+      return new ActivityGroupsBinding((CoordinatorLayout) rootView, backButton, createGroupButton,
+          discoverGroupsRecyclerView, earnButton, earnNav, emptyMessageView, emptyStateView,
+          errorMessageView, header, homeNav, infoNav, linearLayout2, loadingGifView,
+          myGroupsRecyclerView, retryButton, searchButton, seeAllDiscoverButton,
+          seeAllMyGroupsButton, swipeRefreshLayout, tapriNav, tipsNav);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

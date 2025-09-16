@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .success { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        img { max-width: 300px; height: auto; margin: 10px; border: 2px solid #ddd; }
+        .log { background: #f5f5f5; padding: 10px; margin: 10px 0; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Backend Image Test</h1>
+    
+    <div class="test">
+        <h2>Test Backend Image Serving</h2>
+        <p>Testing if the backend is serving images correctly:</p>
+        
+        <div>
+            <h3>Image 1:</h3>
+            <img src="http://192.168.1.6:8080/api/images/posts/00b4db9a-1666-42c9-913e-8d22587fdcae.jpg" 
+                 alt="Test Image 1" 
+                 onload="logResult('Image 1', 'SUCCESS', this.src)"
+                 onerror="logResult('Image 1', 'FAILED', this.src)">
+        </div>
+        
+        <div>
+            <h3>Image 2:</h3>
+            <img src="http://192.168.1.6:8080/api/images/posts/6e67a119-506e-457a-92fd-c6fe2a8cec6f.jpg" 
+                 alt="Test Image 2" 
+                 onload="logResult('Image 2', 'SUCCESS', this.src)"
+                 onerror="logResult('Image 2', 'FAILED', this.src)">
+        </div>
+        
+        <div>
+            <h3>Image 3:</h3>
+            <img src="http://192.168.1.6:8080/api/images/posts/fa8da67f-791e-4c12-b254-f70167c8237c.jpg" 
+                 alt="Test Image 3" 
+                 onload="logResult('Image 3', 'SUCCESS', this.src)"
+                 onerror="logResult('Image 3', 'FAILED', this.src)">
+        </div>
+    </div>
+    
+    <div class="test">
+        <h2>Test Results</h2>
+        <div id="log" class="log"></div>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
+    
+    <div class="test">
+        <h2>Instructions</h2>
+        <ol>
+            <li>If images load above, the backend is working correctly</li>
+            <li>If images don't load, check the backend logs for errors</li>
+            <li>Make sure the backend is running on port 8080</li>
+            <li>Check that the image files exist in the uploads/posts folder</li>
+        </ol>
+    </div>
+    
+    <script>
+        function logResult(testName, result, url) {
+            const log = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            const status = result === 'SUCCESS' ? 'success' : 'error';
+            log.innerHTML += `<div class="${status}">[${timestamp}] ${testName}: ${result} - ${url}</div>`;
+            console.log(`${testName}: ${result} - ${url}`);
+        }
+        
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+        }
+        
+        // Test all URLs when page loads
+        window.onload = function() {
+            logResult('Test', 'INFO', 'Starting backend image test...');
+        };
+    </script>
+</body>
+</html>

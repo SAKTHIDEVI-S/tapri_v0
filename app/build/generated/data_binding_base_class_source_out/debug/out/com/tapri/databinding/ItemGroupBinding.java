@@ -4,7 +4,6 @@ package com.tapri.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,9 +21,6 @@ public final class ItemGroupBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final TextView followerCount;
-
-  @NonNull
   public final ImageView groupAvatar;
 
   @NonNull
@@ -34,17 +30,24 @@ public final class ItemGroupBinding implements ViewBinding {
   public final TextView groupName;
 
   @NonNull
-  public final Button joinButton;
+  public final TextView joinButton;
 
-  private ItemGroupBinding(@NonNull CardView rootView, @NonNull TextView followerCount,
-      @NonNull ImageView groupAvatar, @NonNull TextView groupDescription,
-      @NonNull TextView groupName, @NonNull Button joinButton) {
+  @NonNull
+  public final TextView lastActive;
+
+  @NonNull
+  public final TextView memberCount;
+
+  private ItemGroupBinding(@NonNull CardView rootView, @NonNull ImageView groupAvatar,
+      @NonNull TextView groupDescription, @NonNull TextView groupName, @NonNull TextView joinButton,
+      @NonNull TextView lastActive, @NonNull TextView memberCount) {
     this.rootView = rootView;
-    this.followerCount = followerCount;
     this.groupAvatar = groupAvatar;
     this.groupDescription = groupDescription;
     this.groupName = groupName;
     this.joinButton = joinButton;
+    this.lastActive = lastActive;
+    this.memberCount = memberCount;
   }
 
   @Override
@@ -74,12 +77,6 @@ public final class ItemGroupBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.followerCount;
-      TextView followerCount = ViewBindings.findChildViewById(rootView, id);
-      if (followerCount == null) {
-        break missingId;
-      }
-
       id = R.id.groupAvatar;
       ImageView groupAvatar = ViewBindings.findChildViewById(rootView, id);
       if (groupAvatar == null) {
@@ -99,13 +96,25 @@ public final class ItemGroupBinding implements ViewBinding {
       }
 
       id = R.id.joinButton;
-      Button joinButton = ViewBindings.findChildViewById(rootView, id);
+      TextView joinButton = ViewBindings.findChildViewById(rootView, id);
       if (joinButton == null) {
         break missingId;
       }
 
-      return new ItemGroupBinding((CardView) rootView, followerCount, groupAvatar, groupDescription,
-          groupName, joinButton);
+      id = R.id.lastActive;
+      TextView lastActive = ViewBindings.findChildViewById(rootView, id);
+      if (lastActive == null) {
+        break missingId;
+      }
+
+      id = R.id.memberCount;
+      TextView memberCount = ViewBindings.findChildViewById(rootView, id);
+      if (memberCount == null) {
+        break missingId;
+      }
+
+      return new ItemGroupBinding((CardView) rootView, groupAvatar, groupDescription, groupName,
+          joinButton, lastActive, memberCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
